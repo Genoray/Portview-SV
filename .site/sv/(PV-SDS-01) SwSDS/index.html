@@ -1,0 +1,4108 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IEC 62304 software verification document set">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/sv/%28PV-SDS-01%29%20SwSDS/">
+      
+      
+        <link rel="prev" href="../%28PV-SRS-01%29%20SwSRS/">
+      
+      
+        <link rel="next" href="../%28PV-TM-01%29%20Traceability%20Matrix/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>(PV-SDS-01) SwSDS - Portview SV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <meta name="google" content="notranslate">
+  <meta name="googlebot" content="notranslate">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pv-sds-01-swsds" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Portview SV" class="md-header__button md-logo" aria-label="Portview SV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portview SV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              (PV-SDS-01) SwSDS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  SV Documents
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portview SV" class="md-nav__button md-logo" aria-label="Portview SV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Portview SV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SV Documents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SV Documents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SV-01%29%20Software%20Validation%20Report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SV-01) Software Validation Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SV-02%29%20Software%20Development%20Planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SV-02) Software Development Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SV-03%29%20Software%20High%20Level%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SV-03) Software High Level Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SV-04%29%20Software%20Verification%20Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SV-04) Software Verification Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SV-05%29%20Software%20Verification%20Report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SV-05) Software Verification Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-RS-01%29%20RS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-RS-01) RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SRS-01%29%20SwSRS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SRS-01) SwSRS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SDS-01) SwSDS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SDS-01) SwSDS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Approval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepared-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepared by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewed-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewed by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approved-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approved by
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-design-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Design Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. System Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. System Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-software-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Software Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-module-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Module Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-representative-processing-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Representative Processing Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-inter-unit-interface-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Inter-Unit Interface Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-data-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Data Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-database-study-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Database Study Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-non-database-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Non-Database Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-persistence-and-reconstruction-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Persistence And Reconstruction Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-detailed-design-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Detailed Design Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Detailed Design Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#50-design-allocation-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.0 Design Allocation Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-patient-and-study-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Patient And Study Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Patient And Study Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-001-patient-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-001: Patient Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-acquisition-and-device-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Acquisition And Device Interaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Acquisition And Device Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-023-select-device-and-acquire-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-023: Select Device And Acquire Image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-024-acquire-image-from-intraoral-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-024: Acquire Image From Intraoral Sensor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-002-acquire-image-from-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-002: Acquire Image From File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-025-acquire-image-from-twain-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-025: Acquire Image From TWAIN Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-026-show-status-of-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-026: Show Status Of Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-027-change-fmx-continuous-acquisition-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-027: Change FMX Continuous Acquisition Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-028-multi-sensor-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-028: Multi-Sensor Select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-029-intraoral-sensor-acquisition-wait-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-029: Intraoral Sensor Acquisition Wait Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-030-usb-data-integrity-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-030: USB Data Integrity Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-viewer-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Viewer Presentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Viewer Presentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewer-state-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewer State Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-003-main-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-003: Main Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-004-thumbnail-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-004: Thumbnail Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-005-toothmapwnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-005: ToothMapWnd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-006-compare-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-006: Compare Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-image-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Image Interaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Image Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-013-image-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-013: Image Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-014-image-rotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-014: Image Rotate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-annotation-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Annotation And Measurement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Annotation And Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-007-ellipse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-007: Ellipse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-008-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-008: Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-009-arrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-009: Arrow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-010-pencil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-010: Pencil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-011-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-011: Angle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-012-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-012: Length
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-output-and-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Output And Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 Output And Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-015-print-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-015: Print Image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-016-print-image-to-dicom-printer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-016: Print Image To DICOM Printer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-017-export-image-to-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-017: Export Image To File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-018-export-image-to-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-018: Export Image To CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-019-sendimagetodicomserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-019: SendImageToDicomServer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-support-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Support Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7 Support Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-020-local-network-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-020: Local Network Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-021-logging-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-021: Logging Activity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-022-patch-language-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-022: Patch Language File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-031-check-for-instability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-031: Check For Instability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-interface-and-platform-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Interface And Platform Assumptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Interface And Platform Assumptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-external-interface-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 External Interface Contracts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-failure-handling-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Failure-Handling Expectations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-design-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Design Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-design-use-in-the-sv-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Design Use In The SV Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-TM-01%29%20Traceability%20Matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-TM-01) Traceability Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-STP-01%29%20SwSTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-STP-01) SwSTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-STR-01%29%20SwSTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-STR-01) SwSTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-TP-01%29%20SwTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-TP-01) SwTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-TR-01%29%20SwTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-TR-01) SwTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SYSTP-01%29%20SystemTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SYSTP-01) SystemTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-SYSTR-01%29%20SystemTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-SYSTR-01) SystemTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28PV-CSRS-01%29%20SwRS%20for%20Cybersecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (PV-CSRS-01) SwRS for Cybersecurity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28FMEA-Z01%29%20Risks%20FMEA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (FMEA-Z01) Risks FMEA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28NSE-Z01%29%20Network%20Security%20Enclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (NSE-Z01) Network Security Enclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Approval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepared-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepared by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewed-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewed by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approved-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approved by
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-design-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Design Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. System Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. System Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-software-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Software Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-module-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Module Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-representative-processing-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Representative Processing Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-inter-unit-interface-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Inter-Unit Interface Definitions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-data-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Data Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-database-study-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Database Study Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-non-database-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Non-Database Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-persistence-and-reconstruction-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Persistence And Reconstruction Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-detailed-design-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Detailed Design Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Detailed Design Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#50-design-allocation-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.0 Design Allocation Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-patient-and-study-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Patient And Study Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Patient And Study Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-001-patient-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-001: Patient Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-acquisition-and-device-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Acquisition And Device Interaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Acquisition And Device Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-023-select-device-and-acquire-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-023: Select Device And Acquire Image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-024-acquire-image-from-intraoral-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-024: Acquire Image From Intraoral Sensor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-002-acquire-image-from-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-002: Acquire Image From File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-025-acquire-image-from-twain-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-025: Acquire Image From TWAIN Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-026-show-status-of-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-026: Show Status Of Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-027-change-fmx-continuous-acquisition-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-027: Change FMX Continuous Acquisition Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-028-multi-sensor-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-028: Multi-Sensor Select
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-029-intraoral-sensor-acquisition-wait-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-029: Intraoral Sensor Acquisition Wait Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-030-usb-data-integrity-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-030: USB Data Integrity Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-viewer-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Viewer Presentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Viewer Presentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewer-state-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewer State Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-003-main-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-003: Main Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-004-thumbnail-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-004: Thumbnail Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-005-toothmapwnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-005: ToothMapWnd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-006-compare-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-006: Compare Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-image-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Image Interaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Image Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-013-image-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-013: Image Zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-014-image-rotate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-014: Image Rotate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-annotation-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Annotation And Measurement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Annotation And Measurement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-007-ellipse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-007: Ellipse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-008-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-008: Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-009-arrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-009: Arrow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-010-pencil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-010: Pencil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-011-angle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-011: Angle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-012-length" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-012: Length
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-output-and-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Output And Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 Output And Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-015-print-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-015: Print Image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-016-print-image-to-dicom-printer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-016: Print Image To DICOM Printer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-017-export-image-to-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-017: Export Image To File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-018-export-image-to-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-018: Export Image To CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-019-sendimagetodicomserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-019: SendImageToDicomServer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-support-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Support Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7 Support Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sds-020-local-network-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-020: Local Network Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-021-logging-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-021: Logging Activity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-022-patch-language-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-022: Patch Language File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sds-031-check-for-instability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDS-031: Check For Instability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-interface-and-platform-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Interface And Platform Assumptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Interface And Platform Assumptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-external-interface-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 External Interface Contracts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-failure-handling-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Failure-Handling Expectations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-design-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Design Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-design-use-in-the-sv-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Design Use In The SV Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pv-sds-01-swsds">(PV-SDS-01) SwSDS<a class="headerlink" href="#pv-sds-01-swsds" title="Permanent link">&para;</a></h1>
+<p>Document ID: <code>PV-SDS-01</code>
+Product: <code>Portview</code>
+Document Status: <code>Released</code></p>
+<h2 id="document-approval">Document Approval<a class="headerlink" href="#document-approval" title="Permanent link">&para;</a></h2>
+<h3 id="prepared-by">Prepared by<a class="headerlink" href="#prepared-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manager</td>
+<td><code>J. W. Lee</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="reviewed-by">Reviewed by<a class="headerlink" href="#reviewed-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General Manager</td>
+<td><code>S. I. Choi</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="approved-by">Approved by<a class="headerlink" href="#approved-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTO (Director)</td>
+<td><code>K. Y. Ro</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="revision-history">Revision History<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rev.</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0.0</code></td>
+<td><code>2012.07.02</code></td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td><code>0.1</code></td>
+<td><code>2015.01.12</code></td>
+<td>User interface update</td>
+</tr>
+<tr>
+<td><code>0.2</code></td>
+<td><code>2016.01.19</code></td>
+<td>New function implemented</td>
+</tr>
+<tr>
+<td><code>0.3</code></td>
+<td><code>2017.01.13</code></td>
+<td>System issue revision</td>
+</tr>
+<tr>
+<td><code>0.4</code></td>
+<td><code>2018.01.12</code></td>
+<td>New device added</td>
+</tr>
+<tr>
+<td><code>0.5</code></td>
+<td><code>2019.01.21</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>0.6</code></td>
+<td><code>2020.01.30</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>0.7</code></td>
+<td><code>2020.10.08</code></td>
+<td>GUI update</td>
+</tr>
+<tr>
+<td><code>0.8</code></td>
+<td><code>2021.02.26</code></td>
+<td>Linkage usability improvement</td>
+</tr>
+<tr>
+<td><code>0.9</code></td>
+<td><code>2021.09.10</code></td>
+<td>Program issue update</td>
+</tr>
+<tr>
+<td><code>1.0</code></td>
+<td><code>2021.10.08</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>1.1</code></td>
+<td><code>2022.03.04</code></td>
+<td>Connection-status improvement</td>
+</tr>
+<tr>
+<td><code>1.2</code></td>
+<td><code>2023.01.04</code></td>
+<td>Increased image capacity</td>
+</tr>
+<tr>
+<td><code>1.3</code></td>
+<td><code>2023.04.21</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>1.4</code></td>
+<td><code>2024.01.08</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>1.5</code></td>
+<td><code>2024.01.15</code></td>
+<td>Document number changed from 603 to Z01 according to OP-709</td>
+</tr>
+<tr>
+<td><code>1.6</code></td>
+<td><code>2025.08.14</code></td>
+<td>Updated software architecture and added translation-related design item</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-purpose">1. Purpose<a class="headerlink" href="#1-purpose" title="Permanent link">&para;</a></h2>
+<p>This document describes the software design needed to satisfy the Portview software requirements. It specifies the software architecture, data design, and detailed design of each software unit to a level sufficient for implementation and verification.</p>
+<h2 id="2-design-overview">2. Design Overview<a class="headerlink" href="#2-design-overview" title="Permanent link">&para;</a></h2>
+<p>Portview is designed as workstation software for image management, image acquisition, image viewing, and supporting diagnostic workflow operations.</p>
+<p>The software is integrated with an image database, image viewer, and image acquisition module. The design separates the software into stable operational units:</p>
+<ul>
+<li>patient management</li>
+<li>device service</li>
+<li>image viewer</li>
+<li>export and communication services</li>
+<li>language-resource support</li>
+</ul>
+<p>ImageProcess-specific design content is not carried into the current authored scope.</p>
+<h2 id="3-system-architecture">3. System Architecture<a class="headerlink" href="#3-system-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="31-software-architecture">3.1 Software Architecture<a class="headerlink" href="#31-software-architecture" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    A["Patient Management"] --&gt; C["Image Viewer"]
+    B["Device Service"] --&gt; C
+    C --&gt; D["Export And Communication"]
+    C --&gt; E["Logging And Configuration"]
+    F["Language Resources"] --&gt; C</code></pre>
+<ul>
+<li>1) Patient management unit manages patients' information (add / delete / modify).</li>
+<li>2) Device service unit checks connectivity between Viewer and modalities.</li>
+<li>3) Image viewer unit shows images relevant to the selected patient and supports annotations (length, arrow, ellipse, angle).</li>
+<li>4) Exportation service unit exports images to other types (DICOM files, plain images, burned CD).</li>
+<li>5) Image viewer should offer GUI translations when the user demands.</li>
+</ul>
+<h3 id="32-module-responsibilities">3.2 Module Responsibilities<a class="headerlink" href="#32-module-responsibilities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patient management unit</td>
+<td>Manage patient information including add, delete, and modify operations</td>
+</tr>
+<tr>
+<td>Device service unit</td>
+<td>Check connectivity between the viewer and connected modalities</td>
+</tr>
+<tr>
+<td>Image viewer unit</td>
+<td>Display images and provide diagnostic interaction tools</td>
+</tr>
+<tr>
+<td>Exportation service unit</td>
+<td>Export images and related information to supported destinations</td>
+</tr>
+<tr>
+<td>Language-resource support</td>
+<td>Provide GUI translation support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-representative-processing-paths">3.3 Representative Processing Paths<a class="headerlink" href="#33-representative-processing-paths" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Processing Path</th>
+<th>Design Intent</th>
+<th>Primary Modules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patient registration and selection</td>
+<td>Create, update, select, and reopen patient or study records before image operations start</td>
+<td>Patient management, local data store</td>
+</tr>
+<tr>
+<td>Acquisition and import</td>
+<td>Acquire images from supported sensors, file imports, or TWAIN paths and bind them to the active patient context</td>
+<td>Device service, patient management, image viewer</td>
+</tr>
+<tr>
+<td>Mount and viewer reconstruction</td>
+<td>Reconstruct the correct mount, image set, and annotation set from stored metadata and file structures</td>
+<td>Image viewer, TMI/TII files, local data store</td>
+</tr>
+<tr>
+<td>Annotation and diagnostic interaction</td>
+<td>Create and render annotation objects while preserving image and patient attribution</td>
+<td>Image viewer, annotation modules</td>
+</tr>
+<tr>
+<td>Output and communication</td>
+<td>Print, export, burn media, or transmit DICOM payloads while preserving selected-image context</td>
+<td>Exportation service, image viewer</td>
+</tr>
+<tr>
+<td>Logging and support</td>
+<td>Record operational events, support troubleshooting, and apply language-resource updates</td>
+<td>Logging support, language-resource support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-inter-unit-interface-definitions">3.4 Inter-Unit Interface Definitions<a class="headerlink" href="#34-inter-unit-interface-definitions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Source Unit</th>
+<th>Target Unit</th>
+<th>Transferred Data</th>
+<th>Trigger</th>
+<th>Failure Handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patient Management</td>
+<td>Image Viewer</td>
+<td><code>ActivePatientContext</code> (PatientID, StudyGUID, EquipmentPath)</td>
+<td>Patient selection or reopen completed</td>
+<td>Viewer receives empty context; display error message</td>
+</tr>
+<tr>
+<td>Patient Management</td>
+<td>Exportation Service</td>
+<td><code>ActivePatientContext</code> (PatientID, StudyGUID)</td>
+<td>Export action initiated by user</td>
+<td>Export aborted; user-visible error</td>
+</tr>
+<tr>
+<td>Device Service</td>
+<td>Image Viewer</td>
+<td><code>AcquiredImageData</code> (image buffer, modality metadata, patient binding)</td>
+<td>Acquisition completed</td>
+<td>Viewer not updated; acquisition error displayed</td>
+</tr>
+<tr>
+<td>Device Service</td>
+<td>Patient Management</td>
+<td><code>DeviceStatus</code> (connection state, device identifier)</td>
+<td>Device state change detected</td>
+<td>Status display updated to disconnected state</td>
+</tr>
+<tr>
+<td>Image Viewer</td>
+<td>Exportation Service</td>
+<td><code>SelectedImageSet</code> (image references, current annotations, display metadata)</td>
+<td>User initiates print, export, or DICOM send</td>
+<td>Export aborted if no image selected; error displayed</td>
+</tr>
+<tr>
+<td>Image Viewer</td>
+<td>Logging Support</td>
+<td><code>WorkflowEvent</code> (event type, source module, timestamp)</td>
+<td>Any auditable viewer operation</td>
+<td>Log failure does not block primary workflow</td>
+</tr>
+<tr>
+<td>Language Resources</td>
+<td>Image Viewer</td>
+<td><code>LanguagePatch</code> (resource key-value set, target locale)</td>
+<td>User changes GUI language</td>
+<td>GUI falls back to default language on patch failure</td>
+</tr>
+<tr>
+<td>Logging Support</td>
+<td>Image Viewer</td>
+<td><code>TroubleshootingGuidance</code> (error type, instruction text)</td>
+<td>System instability or classified error detected</td>
+<td>Generic error message if guidance lookup fails</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    PM["Patient Management"] --&gt;|"ActivePatientContext"| IV["Image Viewer"]
+    PM --&gt;|"ActivePatientContext"| ES["Exportation Service"]
+    DS["Device Service"] --&gt;|"AcquiredImageData"| IV
+    DS --&gt;|"DeviceStatus"| PM
+    IV --&gt;|"SelectedImageSet"| ES
+    IV --&gt;|"WorkflowEvent"| LOG["Logging Support"]
+    LR["Language Resources"] --&gt;|"LanguagePatch"| IV
+    LOG --&gt;|"TroubleshootingGuidance"| IV</code></pre>
+<h2 id="4-data-design">4. Data Design<a class="headerlink" href="#4-data-design" title="Permanent link">&para;</a></h2>
+<h3 id="41-database-study-table">4.1 Database Study Table<a class="headerlink" href="#41-database-study-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Data Group</th>
+<th>Representative Fields</th>
+<th>Design Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Record identity</td>
+<td><code>IdxStudy</code>, <code>StudyInstanceUID</code>, <code>GUID</code>, <code>BackupGUID</code></td>
+<td>Stable identity for patient-study records and backup linkage</td>
+</tr>
+<tr>
+<td>Patient identity</td>
+<td><code>ID</code>, <code>OtherID</code>, <code>Name</code>, <code>BirthDate</code>, <code>Sex</code>, <code>Age</code></td>
+<td>Patient registration, lookup, and demographic display</td>
+</tr>
+<tr>
+<td>Clinical and workflow context</td>
+<td><code>StudyDescription</code>, <code>BodyPartExamined</code>, <code>PerfPrcStepID</code>, <code>AccessNumber</code></td>
+<td>Study meaning and workflow attribution</td>
+</tr>
+<tr>
+<td>State and storage</td>
+<td><code>Opened</code>, <code>BackupStatus</code>, <code>WhereIs</code>, <code>BackupHDDID</code></td>
+<td>Reopen behavior, backup tracking, storage-state management</td>
+</tr>
+<tr>
+<td>Counts and category</td>
+<td><code>CountPX</code>, <code>CountCX</code>, <code>CountOX</code>, <code>CountOV</code>, <code>CountDC</code>, <code>CountCT</code>, <code>category</code></td>
+<td>Acquisition composition and mounted-study organization</td>
+</tr>
+<tr>
+<td>Contact and address</td>
+<td><code>Email</code>, <code>Address1</code>, <code>City</code>, <code>StateProvince</code>, <code>HomePhone</code>, <code>MobilePhone</code></td>
+<td>Patient-contact and administrative data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-non-database-files">4.2 Non-Database Files<a class="headerlink" href="#42-non-database-files" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>File Structure</th>
+<th>Purpose</th>
+<th>Representative Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TMI</code> (FILM_MOUNT_INFO)</td>
+<td>Mounted-image layout</td>
+<td><code>TYPE</code>, <code>GUID</code>, <code>WIDTH</code>, <code>HEIGHT</code>, <code>DIVIDE_COL</code>, <code>DIVIDE_ROW</code>, <code>IMAGE_FILE</code> (148 bytes)</td>
+</tr>
+<tr>
+<td><code>TMI</code> (ITEM)</td>
+<td>Mount cell placement</td>
+<td><code>LEFT</code>, <code>TOP</code>, <code>RIGHT</code>, <code>BOTTOM</code>, <code>GUID</code>, <code>IMAGE_FILES</code>, <code>SELECTED_IMAGE</code>, <code>TITLE</code> (528 bytes)</td>
+</tr>
+<tr>
+<td><code>TII</code> (IMAGE_INFO)</td>
+<td>Extra image metadata</td>
+<td><code>nImageType</code>, <code>nWidth</code>, <code>nHeight</code>, <code>nUsingBits</code>, <code>nInverted</code>, <code>nLaterality</code>, <code>Comment</code>, <code>dCliFactor</code>, <code>nW1OffsetToDisp</code>, <code>nW2OffsetToDisp</code> (2038 bytes)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-persistence-and-reconstruction-logic">4.3 Persistence And Reconstruction Logic<a class="headerlink" href="#43-persistence-and-reconstruction-logic" title="Permanent link">&para;</a></h3>
+<p>The viewer reconstructs the active display state from:</p>
+<ul>
+<li>database-managed patient and study records</li>
+<li>mount-layout metadata in <code>TMI</code></li>
+<li>image and calibration metadata in <code>TII</code></li>
+<li>annotation records linked to the selected equipment or image path</li>
+</ul>
+<h2 id="5-detailed-design-specifications">5. Detailed Design Specifications<a class="headerlink" href="#5-detailed-design-specifications" title="Permanent link">&para;</a></h2>
+<h3 id="50-design-allocation-summary">5.0 Design Allocation Summary<a class="headerlink" href="#50-design-allocation-summary" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Design Area</th>
+<th>Design Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patient and study handling</td>
+<td><code>SDS-001</code></td>
+</tr>
+<tr>
+<td>Acquisition and device interaction</td>
+<td><code>SDS-002</code>, <code>SDS-023</code> to <code>SDS-030</code></td>
+</tr>
+<tr>
+<td>Viewer presentation</td>
+<td><code>SDS-003</code>, <code>SDS-004</code>, <code>SDS-005</code>, <code>SDS-006</code></td>
+</tr>
+<tr>
+<td>Image interaction</td>
+<td><code>SDS-013</code>, <code>SDS-014</code></td>
+</tr>
+<tr>
+<td>Annotation and measurement</td>
+<td><code>SDS-007</code> to <code>SDS-012</code></td>
+</tr>
+<tr>
+<td>Output and communication</td>
+<td><code>SDS-015</code> to <code>SDS-019</code></td>
+</tr>
+<tr>
+<td>Support functions</td>
+<td><code>SDS-020</code>, <code>SDS-021</code>, <code>SDS-022</code>, <code>SDS-031</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="51-patient-and-study-handling">5.1 Patient And Study Handling<a class="headerlink" href="#51-patient-and-study-handling" title="Permanent link">&para;</a></h3>
+<h4 id="sds-001-patient-management">SDS-001: Patient Management<a class="headerlink" href="#sds-001-patient-management" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Patient information (demographics, study metadata, user actions)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Persistent patient-study records, active patient context</td>
+</tr>
+<tr>
+<td>Algorithm</td>
+<td>Validate and persist patient data, maintain active record context, expose correct study to downstream modules</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["AcceptPatientInput()"] --&gt; B{"Action Type?"}
+    B --&gt;|"Create"| C["ValidateFields()"]
+    C --&gt; D["InsertStudyRecord()"]
+    B --&gt;|"Modify"| E["ValidateFields()"]
+    E --&gt; F["UpdateStudyRecord()"]
+    B --&gt;|"Delete"| G["ConfirmDeletion()"]
+    G --&gt; H["RemoveStudyRecord()"]
+    B --&gt;|"Select / Reopen"| I["LoadStudyRecord()"]
+    D --&gt; J["PublishActivePatientContext()"]
+    F --&gt; J
+    H --&gt; J
+    I --&gt; J</code></pre>
+<p><strong>Sub-process: Patient Management (Import)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>External patient data from disc or file</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Imported patient record bound to local data store</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["SelectImportSource()"] --&gt; B["ReadExternalPatientData()"]
+    B --&gt; C["ValidateAndNormalize()"]
+    C --&gt; D["InsertIntoLocalStore()"]</code></pre>
+<hr />
+<h3 id="52-acquisition-and-device-interaction">5.2 Acquisition And Device Interaction<a class="headerlink" href="#52-acquisition-and-device-interaction" title="Permanent link">&para;</a></h3>
+<h4 id="sds-023-select-device-and-acquire-image">SDS-023: Select Device And Acquire Image<a class="headerlink" href="#sds-023-select-device-and-acquire-image" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Available device list, user device selection</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Active device path, acquired image data</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ShowDeviceSelectionUI()"] --&gt; B["UserSelectDevice()"]
+    B --&gt; C["SetActiveDevice()"]
+    C --&gt; D["AcquireImage()"]
+    D --&gt; E["DisplayImage()"]</code></pre>
+<h4 id="sds-024-acquire-image-from-intraoral-sensor">SDS-024: Acquire Image From Intraoral Sensor<a class="headerlink" href="#sds-024-acquire-image-from-intraoral-sensor" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Intraoral sensor signal, selected patient context</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Image data bound to active patient</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>Sensor timeout, sensor not responding, patient context missing</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["OpenPatientContext()"] --&gt; B{"Patient context valid?"}
+    B --&gt;|"No"| C["ShowError('No patient selected')"]
+    B --&gt;|"Yes"| D["SelectSensor()"]
+    D --&gt; E["WaitForSensorReady()"]
+    E --&gt; F{"Sensor ready within timeout?"}
+    F --&gt;|"No"| G["ShowError('Sensor not responding')"]
+    F --&gt;|"Yes"| H["AcquireFromSensor()"]
+    H --&gt; I{"Acquisition success?"}
+    I --&gt;|"No"| J["ShowError('Acquisition failed')"]
+    I --&gt;|"Yes"| K["BindImageToPatient()"]
+    K --&gt; L["DisplayImage()"]</code></pre>
+<h4 id="sds-002-acquire-image-from-file">SDS-002: Acquire Image From File<a class="headerlink" href="#sds-002-acquire-image-from-file" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>File path</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Image bound to active patient</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>File not found, unsupported format, patient context missing</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ShowFileDialog()"] --&gt; B["GetSelectedFile()"]
+    B --&gt; C{"File exists and format supported?"}
+    C --&gt;|"No"| D["ShowError('Invalid file')"]
+    C --&gt;|"Yes"| E["LoadImageFromFile()"]
+    E --&gt; F["BindImageToPatient()"]
+    F --&gt; G["DisplayImage()"]</code></pre>
+<h4 id="sds-025-acquire-image-from-twain-device">SDS-025: Acquire Image From TWAIN Device<a class="headerlink" href="#sds-025-acquire-image-from-twain-device" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>TWAIN device signal</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Image bound to active patient</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["SelectTWAINSource()"] --&gt; B["OpenTWAINSession()"]
+    B --&gt; C["AcquireFromTWAIN()"]
+    C --&gt; D["BindImageToPatient()"]
+    D --&gt; E["DisplayImage()"]
+    E --&gt; F["CloseTWAINSession()"]</code></pre>
+<h4 id="sds-026-show-status-of-device">SDS-026: Show Status Of Device<a class="headerlink" href="#sds-026-show-status-of-device" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Selected device, connection state</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Device status display</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetSelectedDevice()"] --&gt; B["CheckConnectivity()"]
+    B --&gt; C["UpdateStatusDisplay()"]</code></pre>
+<h4 id="sds-027-change-fmx-continuous-acquisition-mode">SDS-027: Change FMX Continuous Acquisition Mode<a class="headerlink" href="#sds-027-change-fmx-continuous-acquisition-mode" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Preset order, FMX layout</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Sequential acquisition workflow</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetFMXPreset()"] --&gt; B["SetContinuousMode()"]
+    B --&gt; C{"Next position?"}
+    C --&gt;|"Yes"| D["WaitForSensorReady()"]
+    D --&gt; E["AcquireImage()"]
+    E --&gt; F["PlaceOnMount(position)"]
+    F --&gt; C
+    C --&gt;|"No"| G["End"]</code></pre>
+<h4 id="sds-028-multi-sensor-select">SDS-028: Multi-Sensor Select<a class="headerlink" href="#sds-028-multi-sensor-select" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Sensor connection signals</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Acquisition image from selected sensor</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["OpenPatient()"] --&gt; B["SelectSensor()"]
+    B --&gt; C{"FindSensor()?"}
+    C --&gt;|"Yes"| D["Ready()"]
+    D --&gt; E["AcquireImage()"]
+    E --&gt; F["DisplayImage()"]
+    C --&gt;|"No"| G["SelectError()"]</code></pre>
+<h4 id="sds-029-intraoral-sensor-acquisition-wait-display">SDS-029: Intraoral Sensor Acquisition Wait Display<a class="headerlink" href="#sds-029-intraoral-sensor-acquisition-wait-display" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Sensor readiness state</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Wait-state display to user</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ShowWaitDisplay()"] --&gt; B{"SensorReady()?"}
+    B --&gt;|"No"| C["PollSensorState()"]
+    C --&gt; A
+    B --&gt;|"Yes"| D["HideWaitDisplay()"]
+    D --&gt; E["ProceedWithAcquisition()"]</code></pre>
+<h4 id="sds-030-usb-data-integrity-check">SDS-030: USB Data Integrity Check<a class="headerlink" href="#sds-030-usb-data-integrity-check" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>USB drive</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Result of the integrity check</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ConnectUSB()"] --&gt; B["CalculateChecksum()"]
+    B --&gt; C["GetExpectedChecksum()"]
+    C --&gt; D{"Match?"}
+    D --&gt;|"Yes"| E["ReportIntegrityOK()"]
+    D --&gt;|"No"| F["ReportCorruption()"]</code></pre>
+<hr />
+<h3 id="53-viewer-presentation">5.3 Viewer Presentation<a class="headerlink" href="#53-viewer-presentation" title="Permanent link">&para;</a></h3>
+<h4 id="viewer-state-model">Viewer State Model<a class="headerlink" href="#viewer-state-model" title="Permanent link">&para;</a></h4>
+<p>The Main Viewer operates through the following state transitions:</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Idle
+    Idle --&gt; Loading : Patient selected or study reopened
+    Loading --&gt; Displaying : Mount, images, and annotations loaded
+    Loading --&gt; Error : Load failure (mount, image, or annotation)
+    Error --&gt; Idle : User acknowledges error
+    Displaying --&gt; Editing : User modifies annotation or image property
+    Editing --&gt; Displaying : Modification applied
+    Editing --&gt; Saving : User commits changes
+    Saving --&gt; Displaying : Save success
+    Saving --&gt; Error : Save failure
+    Displaying --&gt; Idle : Patient closed or deselected</code></pre>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Idle</td>
+<td>No patient context active; viewer is empty</td>
+</tr>
+<tr>
+<td>Loading</td>
+<td>Reconstructing mount, images, and annotations from stored metadata</td>
+</tr>
+<tr>
+<td>Displaying</td>
+<td>Active patient images and annotations rendered on mount</td>
+</tr>
+<tr>
+<td>Editing</td>
+<td>User is modifying annotation geometry, text, or image display properties</td>
+</tr>
+<tr>
+<td>Saving</td>
+<td>Committing modified image info and annotation info to persistent storage</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>A load or save failure has occurred; user action required to recover</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sds-003-main-viewer">SDS-003: Main Viewer<a class="headerlink" href="#sds-003-main-viewer" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Patient image path, mount metadata, annotation metadata</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Display images and annotations on mount</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>Mount load failure, image load failure, annotation load failure, save failure</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetEquipmentPath()"] --&gt; B["GetMount()"]
+    B --&gt; B1{"Mount loaded?"}
+    B1 --&gt;|"No"| B2["ShowError('Mount load failed')"]
+    B1 --&gt;|"Yes"| C["GetImage()"]
+    C --&gt; C1{"Images loaded?"}
+    C1 --&gt;|"No"| C2["ShowError('No images found')"]
+    C1 --&gt;|"Yes"| D["GetAnno()"]
+    D --&gt; E["ShowMainWnd()"]
+    E --&gt; F{"User Input?"}
+    F --&gt;|"Continue"| E
+    F --&gt;|"Save"| G["SaveImageInfo()"]
+    G --&gt; H["SaveAnnoInfo()"]
+    F --&gt;|"Exit"| I["End"]</code></pre>
+<p><strong>Sub-process: GetAnno</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Equipment path</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Created annotation objects</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetEquipmentPath()"] --&gt; B["FindAnnoFile()"]
+    B --&gt; C["LoadAnnoInfo()"]
+    C --&gt; D["new CAnno"]
+    D --&gt; E["pAnno-&gt;Create()"]</code></pre>
+<p><strong>Sub-process: GetMount</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Equipment path</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Created mount template</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetEquipmentPath()"] --&gt; B["FindMountFile()"]
+    B --&gt; C["LoadMountInfo()"]
+    C --&gt; D["new CMount"]
+    D --&gt; E["pMount-&gt;Create()"]</code></pre>
+<p><strong>Sub-process: GetImage</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Equipment path</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Created image objects</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetEquipmentPath()"] --&gt; B["FindImageFile()"]
+    B --&gt; C["LoadImagesInfo()"]
+    C --&gt; D["new CImages"]
+    D --&gt; E["pImages-&gt;Create()"]</code></pre>
+<p><strong>Sub-process: ShowMainWnd / ShowMainWndImages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Equipment type properties</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Rendered images and annotations</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetProperty()"] --&gt; B["pImages-&gt;Show()"]
+    B --&gt; C["pAnno-&gt;Show()"]</code></pre>
+<p><strong>Sub-process: Image Move</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Image and X, Y position value</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed image position property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetCurrentPosition()"] --&gt; B["ApplyOffset(deltaX, deltaY)"]
+    B --&gt; C["UpdatePositionProperty()"]
+    C --&gt; D["Redraw()"]</code></pre>
+<h4 id="sds-004-thumbnail-viewer">SDS-004: Thumbnail Viewer<a class="headerlink" href="#sds-004-thumbnail-viewer" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Patient image path</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Displayed thumbnail images</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>No images available for selected patient</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetPatientPath()"] --&gt; B["GetEquipmentPath()"]
+    B --&gt; C["GetImage()"]
+    C --&gt; C1{"Images available?"}
+    C1 --&gt;|"No"| C2["ShowEmptyThumbnailState()"]
+    C1 --&gt;|"Yes"| D{"bShowThumbnailWnd?"}
+    D --&gt;|"Yes"| E["ShowThumbnailImages()"]
+    E --&gt; F{"UserInput() == End?"}
+    F --&gt;|"No"| D
+    F --&gt;|"Yes"| G["End"]
+    D --&gt;|"No"| F</code></pre>
+<h4 id="sds-005-toothmapwnd">SDS-005: ToothMapWnd<a class="headerlink" href="#sds-005-toothmapwnd" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Mounted-study layout and selected exam type</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Structured mount or tooth-map view</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetMountLayout()"] --&gt; B["MapToothPositions()"]
+    B --&gt; C["RenderToothMap()"]
+    C --&gt; D{"User selects position?"}
+    D --&gt;|"Yes"| E["NavigateToImage(position)"]
+    E --&gt; C
+    D --&gt;|"No"| F["End"]</code></pre>
+<h4 id="sds-006-compare-viewer">SDS-006: Compare Viewer<a class="headerlink" href="#sds-006-compare-viewer" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Selected images, user compare action</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Compared images display</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetSelectedImages()"] --&gt; B["GetMountType()"]
+    B --&gt; C["SetTypeMount()"]
+    C --&gt; D["ShowMount()"]
+    D --&gt; E["ShowCompareImages()"]</code></pre>
+<p><strong>Sub-process: Show Compare Mount</strong></p>
+<pre class="mermaid"><code>flowchart TD
+    A["GetMountType()"] --&gt; B["SetTypeMount()"]
+    B --&gt; C["ShowMount()"]</code></pre>
+<p><strong>Sub-process: Show Compare Image</strong></p>
+<pre class="mermaid"><code>flowchart TD
+    A["GetSelectedCompareImages()"] --&gt; B["RenderSideBySide()"]</code></pre>
+<hr />
+<h3 id="54-image-interaction">5.4 Image Interaction<a class="headerlink" href="#54-image-interaction" title="Permanent link">&para;</a></h3>
+<h4 id="sds-013-image-zoom">SDS-013: Image Zoom<a class="headerlink" href="#sds-013-image-zoom" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Image and zoom parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed image zoom property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetCurrentZoom()"] --&gt; B["ApplyZoomFactor(factor)"]
+    B --&gt; C["UpdateZoomProperty()"]
+    C --&gt; D["Redraw()"]</code></pre>
+<h4 id="sds-014-image-rotate">SDS-014: Image Rotate<a class="headerlink" href="#sds-014-image-rotate" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Image and rotate parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed image rotate property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetCurrentRotation()"] --&gt; B["ApplyRotation(angle)"]
+    B --&gt; C["UpdateRotateProperty()"]
+    C --&gt; D["Redraw()"]</code></pre>
+<hr />
+<h3 id="55-annotation-and-measurement">5.5 Annotation And Measurement<a class="headerlink" href="#55-annotation-and-measurement" title="Permanent link">&para;</a></h3>
+<h4 id="sds-007-ellipse">SDS-007: Ellipse<a class="headerlink" href="#sds-007-ellipse" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Annotation and ellipse parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed annotation ellipse property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetEllipseParam(center, radius)"] --&gt; B["SetAnnoProperty(ELLIPSE, ...)"]
+    B --&gt; C["Redraw()"]</code></pre>
+<h4 id="sds-008-text">SDS-008: Text<a class="headerlink" href="#sds-008-text" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Annotation and text parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed annotation text property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetTextParam()"] --&gt; B["SetTextProperty(TEXT, x, y, strText)"]</code></pre>
+<h4 id="sds-009-arrow">SDS-009: Arrow<a class="headerlink" href="#sds-009-arrow" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Annotation and arrow parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed annotation arrow property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetArrowParam(start, end)"] --&gt; B["SetAnnoProperty(ARROW, ...)"]
+    B --&gt; C["Redraw()"]</code></pre>
+<h4 id="sds-010-pencil">SDS-010: Pencil<a class="headerlink" href="#sds-010-pencil" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Annotation and pencil parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed annotation pencil property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetPencilParam()"] --&gt; B["SetAnnoProperty(PENCIL, x, y)"]</code></pre>
+<h4 id="sds-011-angle">SDS-011: Angle<a class="headerlink" href="#sds-011-angle" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Annotation and angle parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Changed annotation angle property</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetAngleParam(p1, vertex, p2)"] --&gt; B["SetAnnoProperty(ANGLE, ...)"]
+    B --&gt; C["Redraw()"]</code></pre>
+<h4 id="sds-012-length">SDS-012: Length<a class="headerlink" href="#sds-012-length" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Annotation and length parameter</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Calibrated length measurement</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetLengthParam(start, end)"] --&gt; B["CalculateLength(start, end, dCliFactor)"]
+    B --&gt; C["SetAnnoProperty(LENGTH, ...)"]
+    C --&gt; D["Redraw()"]</code></pre>
+<hr />
+<h3 id="56-output-and-communication">5.6 Output And Communication<a class="headerlink" href="#56-output-and-communication" title="Permanent link">&para;</a></h3>
+<h4 id="sds-015-print-image">SDS-015: Print Image<a class="headerlink" href="#sds-015-print-image" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Selected image</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Print job or error message</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ShowPrintDialog()"] --&gt; B["GetOptions()"]
+    B --&gt; C{"isImageExist()?"}
+    C --&gt;|"Yes"| D["TransmitImage()"]
+    C --&gt;|"No"| E["ShowError()"]</code></pre>
+<h4 id="sds-016-print-image-to-dicom-printer">SDS-016: Print Image To DICOM Printer<a class="headerlink" href="#sds-016-print-image-to-dicom-printer" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Selected image, DICOM printer configuration</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>DICOM print request or error message</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ShowPrintDialog()"] --&gt; B["GetOptions()"]
+    B --&gt; C{"isImageExist()?"}
+    C --&gt;|"No"| D["ShowMsgBox()"]
+    C --&gt;|"Yes"| E{"isConnectedDicomPrint()?"}
+    E --&gt;|"No"| F["ShowMsgBox()"]
+    E --&gt;|"Yes"| G["TransmitImageToDICOM_Printer()"]</code></pre>
+<h4 id="sds-017-export-image-to-file">SDS-017: Export Image To File<a class="headerlink" href="#sds-017-export-image-to-file" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Image</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Exported image file</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>No image selected, target path invalid, conversion failure</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ShowExportDialog()"] --&gt; B["GetOptions()"]
+    B --&gt; C{"isImageExist()?"}
+    C --&gt;|"No"| D["ShowError('No image selected')"]
+    C --&gt;|"Yes"| E{"Target path valid?"}
+    E --&gt;|"No"| F["ShowError('Invalid path')"]
+    E --&gt;|"Yes"| G["ConvertImageToFile()"]</code></pre>
+<h4 id="sds-018-export-image-to-cd">SDS-018: Export Image To CD<a class="headerlink" href="#sds-018-export-image-to-cd" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Selected image set, media destination</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Burned media or error</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>No image selected, media not available, burn failure</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["ShowMediaExportDialog()"] --&gt; B["GetOptions()"]
+    B --&gt; C{"isImageExist()?"}
+    C --&gt;|"No"| D["ShowError('No image selected')"]
+    C --&gt;|"Yes"| E["PrepareImageSet()"]
+    E --&gt; F{"Media available?"}
+    F --&gt;|"No"| G["ShowError('Media not available')"]
+    F --&gt;|"Yes"| H["BurnToMedia()"]</code></pre>
+<h4 id="sds-019-sendimagetodicomserver">SDS-019: SendImageToDicomServer<a class="headerlink" href="#sds-019-sendimagetodicomserver" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Image</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>DICOM transmission result</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetDicomServerConfig()"] --&gt; B{"isConnected()?"}
+    B --&gt;|"No"| C["ShowError()"]
+    B --&gt;|"Yes"| D["PackageDicomPayload()"]
+    D --&gt; E["TransmitToServer()"]
+    E --&gt; F["ConfirmTransmission()"]</code></pre>
+<hr />
+<h3 id="57-support-functions">5.7 Support Functions<a class="headerlink" href="#57-support-functions" title="Permanent link">&para;</a></h3>
+<h4 id="sds-020-local-network-connection">SDS-020: Local Network Connection<a class="headerlink" href="#sds-020-local-network-connection" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Local connection state, device reachability</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Verified connection state or failure report</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["CheckLocalConnect()"] --&gt; B{"Connected?"}
+    B --&gt;|"Yes"| C["Proceed"]
+    B --&gt;|"No"| D["ReportConnectionFailure()"]</code></pre>
+<h4 id="sds-021-logging-activity">SDS-021: Logging Activity<a class="headerlink" href="#sds-021-logging-activity" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Any operations, workflow transitions, error conditions</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Audit-relevant log records</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["CaptureEvent(source, eventType)"] --&gt; B["GetTimestamp()"]
+    B --&gt; C["FormatLogEntry(source, eventType, timestamp, status)"]
+    C --&gt; D["WriteToLogFile()"]</code></pre>
+<h4 id="sds-022-patch-language-file">SDS-022: Patch Language File<a class="headerlink" href="#sds-022-patch-language-file" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Selected language resource, patch request</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Updated GUI language display</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    A["GetSelectedLanguage()"] --&gt; B["LoadLanguageResource()"]
+    B --&gt; C["ApplyPatch()"]
+    C --&gt; D["RefreshGUILabels()"]</code></pre>
+<h4 id="sds-031-check-for-instability">SDS-031: Check For Instability<a class="headerlink" href="#sds-031-check-for-instability" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Any operations</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Error type specification and troubleshooting instructions</td>
+</tr>
+</tbody>
+</table>
+<p>When an error occurs, the system must specify the type of error and provide a solution. Appropriate instructions or guidelines must be provided in case of system failure.</p>
+<pre class="mermaid"><code>flowchart TD
+    A["RecordLog()"] --&gt; B["ClassifyError()"]
+    B --&gt; C["GetTroubleshootingGuidance(errorType)"]
+    C --&gt; D["DisplayErrorAndGuidance(errorType, instructions)"]</code></pre>
+<hr />
+<h2 id="6-interface-and-platform-assumptions">6. Interface And Platform Assumptions<a class="headerlink" href="#6-interface-and-platform-assumptions" title="Permanent link">&para;</a></h2>
+<p>The design assumes:</p>
+<ul>
+<li>a supported Windows workstation environment</li>
+<li>supported acquisition-device connectivity</li>
+<li>file and communication interfaces for export, print, and DICOM exchange</li>
+<li>persistent local storage for patient and study data</li>
+</ul>
+<h3 id="61-external-interface-contracts">6.1 External Interface Contracts<a class="headerlink" href="#61-external-interface-contracts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Interface Type</th>
+<th>Design Expectation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensor and modality interface</td>
+<td>Device service must confirm connectivity and acquisition readiness before image display is attempted</td>
+</tr>
+<tr>
+<td>File import interface</td>
+<td>Imported files must be normalized into the patient-study context before viewer reconstruction occurs</td>
+</tr>
+<tr>
+<td>DICOM print interface</td>
+<td>Output module must check image availability and print options before transmission</td>
+</tr>
+<tr>
+<td>DICOM server interface</td>
+<td>Output module must package and send the selected image set using the configured communication path</td>
+</tr>
+<tr>
+<td>Local storage interface</td>
+<td>Database, <code>TMI</code>, and <code>TII</code> data must remain mutually consistent so reopened studies reconstruct correctly</td>
+</tr>
+<tr>
+<td>Language-resource interface</td>
+<td>GUI text resources must be patchable without changing patient data or image content</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-failure-handling-expectations">6.2 Failure-Handling Expectations<a class="headerlink" href="#62-failure-handling-expectations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Selected image missing at print or export time</li>
+<li>Device not found or driver unavailable</li>
+<li>Patient record cannot be reopened from storage</li>
+<li>Local or network connection state prevents intended operation</li>
+<li>System instability requires a logged event and troubleshooting guidance</li>
+</ul>
+<h2 id="7-design-verification">7. Design Verification<a class="headerlink" href="#7-design-verification" title="Permanent link">&para;</a></h2>
+<p>The detailed design described in this document is verified through:</p>
+<ul>
+<li><strong>Code review</strong>: Completed before unit-level verification as defined in <code>PV-SV-04</code> Section 5.2</li>
+<li><strong>Unit verification</strong>: Each design item is verified through the corresponding unit test procedure in <code>PV-STP-01</code></li>
+<li><strong>Traceability verification</strong>: Design-to-requirement and design-to-test linkage is maintained through <code>PV-TM-01</code></li>
+<li><strong>Design walkthrough</strong>: Architecture and inter-unit interface definitions are reviewed as part of the lifecycle review gates defined in <code>PV-SV-02</code> Section 5.1</li>
+</ul>
+<h2 id="8-design-use-in-the-sv-set">8. Design Use In The SV Set<a class="headerlink" href="#8-design-use-in-the-sv-set" title="Permanent link">&para;</a></h2>
+<p>This design document is intended to support:</p>
+<ul>
+<li>architecture and module allocation in <code>PV-SV-03</code></li>
+<li>validation-basis discussion in <code>PV-SV-01</code></li>
+<li>traceability linkage between requirements, design, and verification in <code>PV-TM-01</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  <script>
+    document.documentElement.setAttribute("translate", "no");
+    document.documentElement.classList.add("notranslate");
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.setAttribute("translate", "no");
+      document.body.classList.add("notranslate");
+    });
+  </script>
+
+  </body>
+</html>

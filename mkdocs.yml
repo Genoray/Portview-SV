@@ -1,0 +1,60 @@
+site_name: Portview SV
+site_description: IEC 62304 software verification document set
+site_url: http://127.0.0.1:8000
+site_dir: .site
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - tables
+  - toc:
+      permalink: true
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+nav:
+  - Home: index.md
+  - SV Documents:
+      - Overview: sv/index.md
+      - (PV-SV-01) Software Validation Report: sv/(PV-SV-01) Software Validation Report.md
+      - (PV-SV-02) Software Development Planning: sv/(PV-SV-02) Software Development Planning.md
+      - (PV-SV-03) Software High Level Design: sv/(PV-SV-03) Software High Level Design.md
+      - (PV-SV-04) Software Verification Plan: sv/(PV-SV-04) Software Verification Plan.md
+      - (PV-SV-05) Software Verification Report: sv/(PV-SV-05) Software Verification Report.md
+      - (PV-RS-01) RS: sv/(PV-RS-01) RS.md
+      - (PV-SRS-01) SwSRS: sv/(PV-SRS-01) SwSRS.md
+      - (PV-SDS-01) SwSDS: sv/(PV-SDS-01) SwSDS.md
+      - (PV-TM-01) Traceability Matrix: sv/(PV-TM-01) Traceability Matrix.md
+      - (PV-STP-01) SwSTP: sv/(PV-STP-01) SwSTP.md
+      - (PV-STR-01) SwSTR: sv/(PV-STR-01) SwSTR.md
+      - (PV-TP-01) SwTP: sv/(PV-TP-01) SwTP.md
+      - (PV-TR-01) SwTR: sv/(PV-TR-01) SwTR.md
+      - (PV-SYSTP-01) SystemTP: sv/(PV-SYSTP-01) SystemTP.md
+      - (PV-SYSTR-01) SystemTR: sv/(PV-SYSTR-01) SystemTR.md
+      - (PV-CSRS-01) SwRS for Cybersecurity: sv/(PV-CSRS-01) SwRS for Cybersecurity.md
+      - (FMEA-Z01) Risks FMEA: sv/(FMEA-Z01) Risks FMEA.md
+      - (NSE-Z01) Network Security Enclosure: sv/(NSE-Z01) Network Security Enclosure.md

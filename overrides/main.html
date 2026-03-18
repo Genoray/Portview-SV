@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta name="google" content="notranslate">
+  <meta name="googlebot" content="notranslate">
+{% endblock %}
+
+{% block announce %}
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.documentElement.setAttribute("translate", "no");
+    document.documentElement.classList.add("notranslate");
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.setAttribute("translate", "no");
+      document.body.classList.add("notranslate");
+    });
+  </script>
+{% endblock %}

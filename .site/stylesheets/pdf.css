@@ -1,0 +1,86 @@
+/* PDF-specific styles applied by mkdocs-exporter */
+
+@page {
+  size: A4;
+  margin: 10mm 10mm 10mm 10mm;
+}
+
+/* Prevent table rows from being cut off across pages */
+table {
+  page-break-inside: auto !important;
+}
+
+tr {
+  page-break-inside: avoid !important;
+  break-inside: avoid-page !important;
+}
+
+thead {
+  display: table-header-group !important;
+}
+
+/* Allow long tables to flow across pages */
+.md-typeset table:not([class]) {
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+.md-typeset th,
+.md-typeset td {
+  padding: 0.4rem 0.5rem !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  font-size: 9pt !important;
+}
+
+/* Ensure mermaid diagrams are visible */
+.mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+  page-break-inside: avoid !important;
+}
+
+/* Hide navigation elements in PDF */
+.md-header,
+.md-tabs,
+.md-sidebar,
+.md-search,
+.md-footer,
+.md-top,
+.md-source {
+  display: none !important;
+}
+
+/* Full width content */
+.md-grid,
+.md-main__inner,
+.md-content,
+.md-content__inner {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0.5rem !important;
+}
+
+.md-content__inner {
+  background: #fff !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* Section breaks */
+h1, h2 {
+  page-break-before: auto;
+  page-break-after: avoid !important;
+}
+
+h3, h4 {
+  page-break-after: avoid !important;
+}
+
+/* Keep code blocks and diagrams together */
+pre, .mermaid, blockquote, img, svg {
+  page-break-inside: avoid !important;
+}
