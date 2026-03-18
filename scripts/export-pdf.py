@@ -10,9 +10,10 @@ import sys
 from pathlib import Path
 from urllib.parse import quote
 
-OUTPUT_DIR = Path("output/pdf-export")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = PROJECT_ROOT / "output" / "pdf-export"
+DOCS_DIR = PROJECT_ROOT / "docs" / "sv"
 BASE_URL = "http://127.0.0.1:8000"
-DOCS_DIR = Path("docs/sv")
 
 PAGES = [
     "(PV-SV-01) Software Validation Report",
