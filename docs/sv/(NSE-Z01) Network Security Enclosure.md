@@ -4,19 +4,32 @@ Document ID: `NSE-Z01`
 Product: `Portview`
 Document Status: `Released`
 
+
 ## Document Approval
 
-| By | Title | Name | Sign |
-| --- | --- | --- | --- |
-| Prepared | Manager | `S. R. Lim` |  |
-| Reviewed | General Manager | `S. I. Choi` |  |
-| Approved | CTO (Director) | `K. Y. Ro` |  |
+### Prepared by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| Manager | `S. R. Lim` |  |
+
+### Reviewed by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| General Manager | `S. I. Choi` |  |
+
+### Approved by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| CTO (Director) | `K. Y. Ro` |  |
 
 ## Revision History
 
-| Rev. | Author | Description | Date |
-| --- | --- | --- | --- |
-| `0.0` | `S. R. Lim` | Initial creation according to verification item subdivision | `2025-01-08` |
+| Rev. | Date | Description |
+| --- | --- | --- |
+| `0.0` | `2025-01-08` | Initial creation according to verification item subdivision |
 
 ## 1. Verification And Validation
 

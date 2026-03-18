@@ -4,6 +4,32 @@ Document ID: `FMEA-Z01`
 Product: `Portview`
 Document Status: `Released`
 
+## Document Approval
+
+### Prepared by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| Manager | `S. R. Lim` |  |
+
+### Reviewed by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| General Manager | `S. I. Choi` |  |
+
+### Approved by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| CTO (Director) | `K. Y. Ro` |  |
+
+## Revision History
+
+| Rev. | Date | Description |
+| --- | --- | --- |
+| `0.0` | `2025-01-08` | Initial creation |
+
 ## 1. Purpose
 
 This document records the Failure Mode and Effects Analysis (FMEA) for the Portview software, covering foreseeable hazardous situations, severity ratings, risk controls, acceptability determinations, and traceability to verification evidence.

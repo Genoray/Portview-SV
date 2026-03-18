@@ -6,11 +6,23 @@ Document Status: `Released`
 
 ## Document Approval
 
-| By | Title | Name | Sign |
-| --- | --- | --- | --- |
-| Prepared | Manager | `S. R. Lim` |  |
-| Reviewed | General Manager | `S. I. Choi` |  |
-| Approved | CTO (Director) | `K. Y. Ro` |  |
+### Prepared by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| Manager | `S. R. Lim` |  |
+
+### Reviewed by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| General Manager | `S. I. Choi` |  |
+
+### Approved by
+
+| Title | Name | Signature |
+| --- | --- | --- |
+| CTO (Director) | `K. Y. Ro` |  |
 
 ## Revision History
 
