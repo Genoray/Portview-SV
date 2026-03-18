@@ -21,24 +21,24 @@ DOCS_DIR = PROJECT_ROOT / "docs" / "sv"
 BASE_URL = "http://127.0.0.1:8000"
 
 PAGES = [
-    "(PV-SV-01) Software Validation Report",
-    "(PV-SV-02) Software Development Planning",
-    "(PV-SV-03) Software High Level Design",
-    "(PV-SV-04) Software Verification Plan",
-    "(PV-SV-05) Software Verification Report",
-    "(PV-RS-01) RS",
-    "(PV-SRS-01) SwSRS",
-    "(PV-SDS-01) SwSDS",
-    "(PV-TM-01) Traceability Matrix",
-    "(PV-STP-01) SwSTP",
-    "(PV-STR-01) SwSTR",
-    "(PV-TP-01) SwTP",
-    "(PV-TR-01) SwTR",
-    "(PV-SYSTP-01) SystemTP",
-    "(PV-SYSTR-01) SystemTR",
-    "(PV-CSRS-01) SwRS for Cybersecurity",
-    "(FMEA-Z01) Risks FMEA",
-    "(NSE-Z01) Network Security Enclosure",
+    "(SV-603-01) Software Validation Report",
+    "(SV-603-02) Software Development Planning",
+    "(SV-603-03) Software High Level Design",
+    "(SV-603-04) Software Verification Plan",
+    "(SV-603-05) Software Verification Report",
+    "(RS-603) RS",
+    "(SRS-603) SwSRS",
+    "(SDS-603) SwSDS",
+    "(TM-603) Traceability Matrix",
+    "(STP-603) SwSTP",
+    "(STR-603) SwSTR",
+    "(TP-603) SwTP",
+    "(TR-603) SwTR",
+    "(SystemTP-603) SystemTP",
+    "(SystemTR-603) SystemTR",
+    "(CSRS-603) SwRS for Cybersecurity",
+    "(FMEA-603) Risks FMEA",
+    "(NSE-603) Network Security Enclosure",
 ]
 
 BODY_MARGIN = {"top": "18mm", "right": "10mm", "bottom": "20mm", "left": "10mm"}
@@ -158,6 +158,7 @@ def make_cover_html(meta, header_text):
     {COMMON_STYLE}
     .doc-title {{ font-size: 18px; font-weight: bold; border-bottom: 2px solid #222; padding-bottom: 8px; margin-top: 20px; }}
     .product {{ font-size: 32px; font-weight: bold; text-align: center; margin-top: 80px; }}
+    .subtitle {{ font-size: 20px; font-weight: normal; text-align: center; margin-top: 8px; color: #444; }}
     .report-info {{ text-align: center; font-size: 12px; margin-top: 20px; color: #444; line-height: 1.8; }}
     .approval {{ margin-top: 50px; }}
     .approval table {{ width: 80%; margin: 0 auto; border-collapse: collapse; }}
@@ -167,7 +168,8 @@ def make_cover_html(meta, header_text):
     </style></head><body>
     <div class="doc-title">{meta['doc_id']} {meta['title']}</div>
     <div class="product">{meta['product']}</div>
-    <div class="report-info">Report type : {meta['title']}<br>Version: {meta['version']}</div>
+    <div class="subtitle">{meta['title']}</div>
+    <div class="report-info">Report no. : {meta['doc_id']}<br>Rev. : {meta['version']}</div>
     <div class="approval"><table>
     <tr><th>By</th><th>Title</th><th>Name</th><th>Sign</th></tr>
     {approval_html}</table></div>

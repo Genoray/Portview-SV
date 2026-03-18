@@ -6,8 +6,6 @@ General policy for creating and managing IEC 62304 certification document sets f
 
 ### 1.1 Required Documents (IEC 62304)
 
-Every software product must produce the following controlled document set:
-
 | Document Type | IEC 62304 Clause | Content Focus |
 | --- | --- | --- |
 | Software Validation Report | 5.8 | Validation basis, lifecycle evidence, release conclusion |
@@ -38,34 +36,31 @@ Every software product must produce the following controlled document set:
 
 ### 2.1 Naming Convention
 
-Use a short product-prefixed identifier family: `{PRODUCT}-{TYPE}-{SEQ}`
+Use product-number-based identifiers: `{Type}-{ProductNo}` or `{Type}-{ProductNo}-{seq}`
 
-Example for product "PV" (Portview):
+Example for product number `603`:
 
 ```
-PV-SV-01    Software Validation Report
-PV-RS-01    Requirement Specification
-PV-SRS-01   Software Requirement Specification
-PV-SDS-01   Software Design Specification
-PV-TM-01    Traceability Matrix
-PV-STP-01   Unit Test Procedures
-PV-STR-01   Unit Test Results
-PV-TP-01    Integration Test Procedures
-PV-TR-01    Integration Test Results
-PV-SYSTP-01 System Test Procedures
-PV-SYSTR-01 System Test Results
-PV-CSRS-01  Cybersecurity Requirements
+SV-603-01    Software Validation Report
+SV-603-05    Software Verification Report
+RS-603       Requirement Specification
+SRS-603      Software Requirement Specification
+SDS-603      Software Design Specification
+TM-603       Traceability Matrix
+STP-603      Unit Test Procedures
+STR-603      Unit Test Results
+TP-603       Integration Test Procedures
+TR-603       Integration Test Results
+SystemTP-603 System Test Procedures
+SystemTR-603 System Test Results
+CSRS-603     Cybersecurity Requirements
+FMEA-603     Risks FMEA
+NSE-603      Network Security Enclosure
 ```
 
 ### 2.2 File Naming
 
 Files follow the pattern: `({ID}) {Title}.md`
-
-```
-(PV-SV-01) Software Validation Report.md
-(PV-RS-01) RS.md
-(FMEA-Z01) Risks FMEA.md
-```
 
 ### 2.3 Internal Identifiers
 
@@ -79,7 +74,7 @@ Files follow the pattern: `({ID}) {Title}.md`
 | System procedures | `SYSP-xxx` | SYSP-001, SYSP-009 |
 | FMEA items | `FMEA-xxx` | FMEA-001, FMEA-021 |
 
-Do not use legacy identifiers from source systems (e.g., Polarion CA-xxxx) as primary IDs.
+Do not use legacy identifiers from source systems as primary IDs.
 
 ## 3. Document Lifecycle
 
@@ -89,19 +84,12 @@ Do not use legacy identifiers from source systems (e.g., Polarion CA-xxxx) as pr
 Draft -> Released
 ```
 
-- `Draft`: Active authoring. Scaffolding sections (Document Overview, Open Items) may be present.
-- `Released`: All scaffolding removed. Document Approval signatures completed. Ready for regulatory submission.
-
 ### 3.2 Release Checklist
 
-Before changing status from Draft to Released:
-
-- [ ] Document Overview section removed
-- [ ] Open Items section removed or resolved
 - [ ] Document Approval signatures completed (Prepared / Reviewed / Approved)
+- [ ] Revision History present with at least initial creation entry
 - [ ] All cross-references use controlled document IDs
-- [ ] No legacy identifiers in the document body
-- [ ] No migration provenance wording in the document body
+- [ ] No legacy identifiers or migration provenance in the document body
 - [ ] Acceptance criteria present for all requirements
 - [ ] Design allocation column present in SwSRS
 - [ ] Flowcharts present for all design items in SwSDS
@@ -112,173 +100,97 @@ Before changing status from Draft to Released:
 
 ### 4.1 Full Traceability Chain
 
-Every requirement must be traceable through this chain:
-
 ```
 RS -> SRS -> SDS -> UTP/ITP -> STR/TR -> SYSP -> SYSTR
 ```
 
-### 4.2 Traceability Matrix Structure
+### 4.2 Coverage Gaps
 
-Split into functional groups. Each group uses two tables:
-
-- **Risk Assessment**: ID, Title, Harm, S, O(pre), RP(pre)
-- **Risk Control**: ID, Risk Control, O(post), RP(post), Acceptable, Verification
-
-For wide tables (7+ columns), split into related tables linked by ID.
-
-### 4.3 Coverage Gaps
-
-When a requirement is intentionally verified at only one level (e.g., integration only), document the design decision with justification in the traceability matrix coverage notes.
+When a requirement is intentionally verified at only one level, document the design decision with justification in the traceability matrix coverage notes.
 
 ## 5. Design Specification Requirements
 
-### 5.1 Per-Unit Content
-
-Each design item (SDS-xxx) must include:
+Each design item must include:
 
 - Input/Output table
-- Algorithm description (flowchart or pseudo-code)
-- Mermaid flowchart diagram
-- Error handling paths (failure branches in flowchart)
+- Mermaid flowchart diagram with error handling paths
 - Sub-process descriptions where applicable
-
-### 5.2 Inter-Unit Interfaces
-
-Document explicitly in a dedicated section:
-
-| Source Unit | Target Unit | Transferred Data | Trigger | Failure Handling |
-| --- | --- | --- | --- | --- |
-
-### 5.3 State Models
-
-Document state transitions for complex units (e.g., viewer):
-
-```mermaid
-stateDiagram-v2
-    [*] --> Idle
-    Idle --> Loading
-    Loading --> Displaying
-    Displaying --> Editing
-    Editing --> Saving
-    Saving --> Displaying
-```
-
-### 5.4 Design Verification
-
-Reference the verification plan (SV-04) and unit procedures (SwSTP) in a dedicated section.
+- Inter-unit interface definitions (Source, Target, Data, Trigger, Failure Handling)
+- State models for complex units
 
 ## 6. Risk Management Requirements
 
 ### 6.1 FMEA Structure
 
-Split wide FMEA tables into:
+Split into two tables per functional group:
 
 - **Risk Identification**: ID, Title, Harm, Risk Control (4 columns)
-- **Risk Scoring**: ID, S, O(pre), RP(pre), O(post), RP(post), Acceptable, Verification (8 columns, short values)
+- **Risk Scoring**: ID, S, O(pre), RP(pre), O(post), RP(post), Acceptable, Verification (8 columns)
 
-### 6.2 Scoring Method
+### 6.2 Cybersecurity Integration
 
-| Factor | Scale |
-| --- | --- |
-| Severity (S) | Product-specific scale (e.g., 1-5) |
-| Occurrence (O) | Product-specific scale (e.g., 1-5) |
-| Risk Priority (RP) | S x O |
+Cross-reference cybersecurity controls to FMEA items. Map each checklist item to FMEA ID, risk category, and control integration description.
 
-Define acceptability thresholds. Document pre-control and post-control scores to demonstrate risk reduction.
-
-### 6.3 Cybersecurity Integration
-
-Cross-reference cybersecurity controls to FMEA items in a dedicated section. Map each cybersecurity checklist item to:
-
-- FMEA ID
-- Risk category (Identify/Protect/Detect/Respond/Recover)
-- Control integration description
-
-### 6.4 External References
-
-All verification evidence must reference controlled documents. If external documents (user manuals, supplier reports) are referenced, either:
-
-- (A) Include them in the controlled document set
-- (B) Remove and replace with equivalent controlled verification references
-
-## 7. Verification And Result Documents
+## 7. Verification Documents
 
 ### 7.1 Procedure-Result Pairing
 
-Each procedure document has a paired result document:
-
-- Procedure: setup, execution intent, acceptance criteria
-- Result: mirrors procedure rows with executor, date, status, deviation
+Each procedure document has a paired result document mirroring its structure.
 
 ### 7.2 Independent Verification
 
-- Record an independent reviewer (different from executor) in execution information
-- Add an execution note justifying single-executor throughput if applicable
+Record an independent reviewer in execution information. Justify single-executor throughput if applicable.
 
 ### 7.3 Evidence References
 
-Every result document must include an Evidence References section:
+Every result document must include an Evidence References section pointing to QMS controlled archive.
 
-| Evidence Type | Reference | Location |
-| --- | --- | --- |
-| Executed test protocol | Signed protocol for procedures | QMS controlled archive |
-| Test environment log | Platform configuration and session log | QMS controlled archive |
-| Independent review record | Review sign-off | QMS controlled archive |
+## 8. PDF Export Pipeline
 
-## 8. Tooling
+### 8.1 Architecture
 
-### 8.1 Authoring
+- Markdown source -> MkDocs Material (preview) -> Playwright (PDF export)
+- Cover page, Revision History, TOC generated as separate HTML pages by the export script
+- Body rendered from live MkDocs serve with Mermaid injection
+- All pages merged into single PDF per document via pypdf
 
-- Markdown as source of truth
-- MkDocs Material for local preview
-- Git for version control
+### 8.2 Cover Page
 
-### 8.2 PDF Export
+- Report no.: document ID
+- Rev.: latest revision number from Revision History
+- Approval table with signature images (base64 from `sign/` folder)
+- GENORAY bar at bottom
 
-- Playwright-based export script for Mermaid-compatible PDF generation
-- `@page { margin: 10mm }` for reduced margins
-- Batch rendering for documents with many diagrams
-- CSS-based table page-break handling
+### 8.3 Header/Footer
 
-### 8.3 Tool Validation
-
-Document development tools and their validation approach in the Software Development Planning document:
-
-| Tool | Validation Approach |
-| --- | --- |
-| Compiler/IDE | Industry-adopted OTS; validated through build output |
-| Source control | Validated through established use |
-| Test platform | Validated through controlled hardware configuration |
+- Header: document ID + title (right-aligned)
+- Footer: page number + company name, separator with left/right margins
+- Applied uniformly via Playwright `headerTemplate`/`footerTemplate`
 
 ## 9. New Product Onboarding
 
-To create a certification document set for a new product:
-
-1. **Define product prefix**: e.g., `NP` for "New Product"
-2. **Copy document templates**: Create all 18 document files with `(NP-{TYPE}-{SEQ}) Title.md` naming
-3. **Populate requirements**: Start with RS (system) -> SRS (software) with acceptance criteria
-4. **Create design specification**: Architecture, per-unit design with flowcharts, inter-unit interfaces
-5. **Define procedures**: Unit (UTP), integration (ITP), system (SYSP) with setup and acceptance criteria
-6. **Build traceability matrix**: RS -> SRS -> SDS -> UTP/ITP -> SYSP full chain
-7. **Perform FMEA**: Risk identification, scoring, controls, verification mapping
-8. **Execute and record results**: STR, TR, SYSTR paired with procedures
-9. **Complete SV core documents**: SV-01 through SV-05 referencing the full document set
-10. **Release**: Remove scaffolding, complete signatures, transition to Released status
+1. **Define product number** (e.g., `603`)
+2. **Create 18 document files** with `({Type}-{ProductNo}) Title.md` naming
+3. **Populate requirements** with acceptance criteria
+4. **Create design specification** with per-unit flowcharts and interfaces
+5. **Define procedures** at unit, integration, and system levels
+6. **Build traceability matrix** covering the full chain
+7. **Perform FMEA** with risk controls and pre/post scoring
+8. **Execute and record results** paired with procedures
+9. **Complete SV core** documents referencing the full set
+10. **Release**: complete signatures, transition to Released status
 
 ## 10. Compliance Verification Checklist
 
-Before regulatory submission, verify:
-
 | IEC 62304 Clause | Check | Document |
 | --- | --- | --- |
-| 5.1 | Lifecycle planning complete with tool validation and maintenance process | SV-02 |
-| 5.2 | All requirements have acceptance criteria and design allocation | RS, SwSRS |
-| 5.3 | Architecture decomposed with safety classification per unit | SV-03 |
-| 5.4 | Per-unit design with I/O, algorithms, flowcharts, error handling, interfaces | SwSDS |
+| 5.1 | Lifecycle planning with tool validation and maintenance | SV-{prod}-02 |
+| 5.2 | Requirements with acceptance criteria and design allocation | RS, SwSRS |
+| 5.3 | Architecture with safety classification per unit | SV-{prod}-03 |
+| 5.4 | Per-unit design with flowcharts, error handling, interfaces | SwSDS |
 | 5.5 | Unit and integration procedures with paired results | SwSTP/STR, SwTP/TR |
 | 5.6 | System procedures formally adopted with paired results | SystemTP/TR |
-| 5.7 | Full traceability chain, approval signatures completed | TM, SV-05 |
-| 5.8 | Validation report with release conclusion | SV-01 |
+| 5.7 | Full traceability chain, approval signatures completed | TM, SV-{prod}-05 |
+| 5.8 | Validation report with release conclusion | SV-{prod}-01 |
 | 7.1 | FMEA with pre/post risk scores, cybersecurity integration | FMEA, CSRS |
-| 7.3 | All documents Released status, configuration controlled | All |
+| 7.3 | All documents Released, configuration controlled | All |

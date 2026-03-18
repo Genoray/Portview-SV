@@ -1,0 +1,2168 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IEC 62304 software verification document set">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/sv/%28SV-603-04%29%20Software%20Verification%20Plan/">
+      
+      
+        <link rel="prev" href="../%28SV-603-03%29%20Software%20High%20Level%20Design/">
+      
+      
+        <link rel="next" href="../%28SV-603-05%29%20Software%20Verification%20Report/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>(SV-603-04) Software Verification Plan - Portview SV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <meta name="google" content="notranslate">
+  <meta name="googlebot" content="notranslate">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sv-603-04-software-verification-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Portview SV" class="md-header__button md-logo" aria-label="Portview SV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portview SV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              (SV-603-04) Software Verification Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  SV Documents
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portview SV" class="md-nav__button md-logo" aria-label="Portview SV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Portview SV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SV Documents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SV Documents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-01%29%20Software%20Validation%20Report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-01) Software Validation Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-02%29%20Software%20Development%20Planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-02) Software Development Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-03%29%20Software%20High%20Level%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-03) Software High Level Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-04) Software Verification Plan
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-04) Software Verification Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Approval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepared-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepared by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewed-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewed by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approved-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approved by
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-referenced-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Referenced Documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-verification-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Verification Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-verification-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Verification Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Verification Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-test-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Test Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-verification-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Verification Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-verification-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Verification Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Verification Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-hardware-and-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Hardware And Devices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-software-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Software And Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Roles And Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-verification-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Verification Items
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-procedures-and-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Procedures And Evidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-schedule-and-entryexit-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Schedule And Entry/Exit Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-deviations-and-risk-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Deviations And Risk Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-traceability-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Traceability Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-05%29%20Software%20Verification%20Report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-05) Software Verification Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28RS-603%29%20RS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (RS-603) RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SRS-603%29%20SwSRS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SRS-603) SwSRS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SDS-603%29%20SwSDS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SDS-603) SwSDS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28TM-603%29%20Traceability%20Matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (TM-603) Traceability Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28STP-603%29%20SwSTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (STP-603) SwSTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28STR-603%29%20SwSTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (STR-603) SwSTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28TP-603%29%20SwTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (TP-603) SwTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28TR-603%29%20SwTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (TR-603) SwTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SystemTP-603%29%20SystemTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SystemTP-603) SystemTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SystemTR-603%29%20SystemTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SystemTR-603) SystemTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28CSRS-603%29%20SwRS%20for%20Cybersecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (CSRS-603) SwRS for Cybersecurity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28FMEA-603%29%20Risks%20FMEA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (FMEA-603) Risks FMEA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28NSE-603%29%20Network%20Security%20Enclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (NSE-603) Network Security Enclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Approval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepared-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepared by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewed-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewed by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approved-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approved by
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-referenced-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Referenced Documents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-verification-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Verification Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-verification-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Verification Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Verification Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-test-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Test Levels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-verification-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Verification Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-verification-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Verification Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Verification Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-hardware-and-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Hardware And Devices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-software-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Software And Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Roles And Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-verification-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Verification Items
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-procedures-and-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Procedures And Evidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-schedule-and-entryexit-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Schedule And Entry/Exit Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-deviations-and-risk-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Deviations And Risk Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-traceability-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Traceability Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sv-603-04-software-verification-plan">(SV-603-04) Software Verification Plan<a class="headerlink" href="#sv-603-04-software-verification-plan" title="Permanent link">&para;</a></h1>
+<p>Document ID: <code>SV-603-04</code><br />
+Product: <code>Portview</code><br />
+Document Status: <code>Released</code></p>
+<h2 id="document-approval">Document Approval<a class="headerlink" href="#document-approval" title="Permanent link">&para;</a></h2>
+<h3 id="prepared-by">Prepared by<a class="headerlink" href="#prepared-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manager</td>
+<td><code>S. R. Lim</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Staff</td>
+<td><code>J. B. Kim</code></td>
+<td></td>
+</tr>
+<tr>
+<td>General Manager</td>
+<td><code>S. I. Choi</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="reviewed-by">Reviewed by<a class="headerlink" href="#reviewed-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manager</td>
+<td><code>M. C. Boo</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="approved-by">Approved by<a class="headerlink" href="#approved-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTO (Director)</td>
+<td><code>K. Y. Ro</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="revision-history">Revision History<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rev.</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0.0</code></td>
+<td><code>2012.03.07</code></td>
+<td>Initial Version</td>
+</tr>
+<tr>
+<td><code>0.1</code></td>
+<td><code>2015.01.12</code></td>
+<td>User Interface Update</td>
+</tr>
+<tr>
+<td><code>0.2</code></td>
+<td><code>2016.01.19</code></td>
+<td>New Function Implemented</td>
+</tr>
+<tr>
+<td><code>0.3</code></td>
+<td><code>2017.01.13</code></td>
+<td>System Issue</td>
+</tr>
+<tr>
+<td><code>0.4</code></td>
+<td><code>2018.01.12</code></td>
+<td>New Device Added</td>
+</tr>
+<tr>
+<td><code>0.5</code></td>
+<td><code>2019.01.21</code></td>
+<td>Device Compatibility</td>
+</tr>
+<tr>
+<td><code>0.6</code></td>
+<td><code>2020.01.30</code></td>
+<td>Device Compatibility</td>
+</tr>
+<tr>
+<td><code>0.7</code></td>
+<td><code>2020.10.08</code></td>
+<td>GUI update</td>
+</tr>
+<tr>
+<td><code>0.8</code></td>
+<td><code>2021.02.26</code></td>
+<td>Linkage usability improve</td>
+</tr>
+<tr>
+<td><code>0.9</code></td>
+<td><code>2021.09.10</code></td>
+<td>Program Issue</td>
+</tr>
+<tr>
+<td><code>1.0</code></td>
+<td><code>2021.10.08</code></td>
+<td>Device Compatibility</td>
+</tr>
+<tr>
+<td><code>1.1</code></td>
+<td><code>2022.03.04</code></td>
+<td>Connection status improve</td>
+</tr>
+<tr>
+<td><code>1.2</code></td>
+<td><code>2023.01.04</code></td>
+<td>Increasing image capacity</td>
+</tr>
+<tr>
+<td><code>1.3</code></td>
+<td><code>2023.04.21</code></td>
+<td>Device Compatibility</td>
+</tr>
+<tr>
+<td><code>1.4</code></td>
+<td><code>2024.01.08</code></td>
+<td>Device Compatibility</td>
+</tr>
+<tr>
+<td><code>1.5</code></td>
+<td><code>2024.01.29</code></td>
+<td>Document number changed from 603 to Z01 according to OP-709</td>
+</tr>
+<tr>
+<td><code>1.6</code></td>
+<td><code>2025.07.24</code></td>
+<td>Revision numbers of related software validation documents updated</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-purpose">1. Purpose<a class="headerlink" href="#1-purpose" title="Permanent link">&para;</a></h2>
+<p>This document defines the software verification plan used to demonstrate that the applicable Portview software functions satisfy their verification and validation criteria.</p>
+<p>The plan is intended to:</p>
+<ul>
+<li>define the verification approach for the covered product baseline</li>
+<li>identify the inputs, procedures, and environments used for verification</li>
+<li>define the acceptance logic for unit, integration, and system verification evidence</li>
+</ul>
+<h2 id="2-scope">2. Scope<a class="headerlink" href="#2-scope" title="Permanent link">&para;</a></h2>
+<p>This plan covers the verification effort for the Portview software set.</p>
+<p>In scope:</p>
+<ul>
+<li>software requirement verification for Portview</li>
+<li>interface and integration verification for the Portview software interfaces referenced in the RS inputs</li>
+<li>execution of the planned unit, integration, and system-level procedures</li>
+</ul>
+<p>The current plan identifies software version <code>2.2.5.16</code> and the default Genoray testing platform as the principal baseline references. Software version <code>2.2.5.16</code> is associated with the <code>2024-10-02</code> release update for Windows 11 and GenX-CR compatibility.</p>
+<h2 id="3-referenced-documents">3. Referenced Documents<a class="headerlink" href="#3-referenced-documents" title="Permanent link">&para;</a></h2>
+<p>The following references govern this plan for the current release baseline.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medical Device Regulation (EU) 2017/745</td>
+<td>Regulatory framework</td>
+</tr>
+<tr>
+<td>Quality management systems - Requirements</td>
+<td>Quality-system reference</td>
+</tr>
+<tr>
+<td>EN ISO 13485:2016 Medical devices Quality management systems</td>
+<td>Governing quality management standard</td>
+</tr>
+<tr>
+<td>ISO 12052:2006 DICOM including workflow and data management</td>
+<td>Governing interoperability standard</td>
+</tr>
+<tr>
+<td>IEC 62304:2006/AMD1:2015 Software lifecycle processes</td>
+<td>Governing software lifecycle standard</td>
+</tr>
+<tr>
+<td>Guidance for the Content of Premarket Submissions for Software Contained in Medical Devices</td>
+<td>Regulatory guidance</td>
+</tr>
+<tr>
+<td>General Principles of Software Validation Final Guidance for Industry and FDA Staff</td>
+<td>Regulatory guidance</td>
+</tr>
+<tr>
+<td>Software and Medical Devices (VdTUV, 2001)</td>
+<td>External guidance reference</td>
+</tr>
+<tr>
+<td>QM Quality System Documentation</td>
+<td>Internal quality reference</td>
+</tr>
+<tr>
+<td>QM Design Control Procedure</td>
+<td>Internal process reference</td>
+</tr>
+<tr>
+<td>QM Software Development Procedure</td>
+<td>Internal process reference</td>
+</tr>
+<tr>
+<td>QM Corrective and Preventive Actions</td>
+<td>Internal process reference</td>
+</tr>
+<tr>
+<td>QM Document Control</td>
+<td>Internal process reference</td>
+</tr>
+<tr>
+<td><code>SV-603-01</code> Software Validation Report</td>
+<td>Validation basis and release conclusion</td>
+</tr>
+<tr>
+<td><code>SV-603-02</code> Software Development Planning</td>
+<td>Lifecycle and configuration-management context</td>
+</tr>
+<tr>
+<td><code>SV-603-03</code> Software High Level Design</td>
+<td>Architecture and decomposition reference</td>
+</tr>
+<tr>
+<td><code>SV-603-05</code> Software Verification Report</td>
+<td>Companion verification result report</td>
+</tr>
+<tr>
+<td><code>RS-603</code> RS for Portview</td>
+<td>System-level requirement input</td>
+</tr>
+<tr>
+<td><code>SRS-603</code> SwSRS for Portview</td>
+<td>Software requirement input</td>
+</tr>
+<tr>
+<td><code>SDS-603</code> SwSDS for Portview</td>
+<td>Software design input</td>
+</tr>
+<tr>
+<td><code>TM-603</code> Traceability Matrix</td>
+<td>Requirement and design traceability reference</td>
+</tr>
+<tr>
+<td><code>STP-603</code> SwSTP for Portview</td>
+<td>Unit verification procedure</td>
+</tr>
+<tr>
+<td><code>TP-603</code> SwTP for Portview</td>
+<td>Integration verification procedure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-verification-objectives">4. Verification Objectives<a class="headerlink" href="#4-verification-objectives" title="Permanent link">&para;</a></h2>
+<p>The verification effort should demonstrate the following:</p>
+<ul>
+<li>the applicable Portview software requirements are verified by controlled procedures and recorded evidence</li>
+<li>the integrated behavior between Portview software components and interfaces is verified</li>
+<li>the planned verification procedures are defined clearly enough to support repeatable execution</li>
+<li>the final verification evidence can support a release or approval decision through an explicit pass or justified-fail logic</li>
+</ul>
+<h2 id="5-verification-strategy">5. Verification Strategy<a class="headerlink" href="#5-verification-strategy" title="Permanent link">&para;</a></h2>
+<p>Verification is organized by level. The plan is structured around unit verification, integration testing, and system testing, with the procedure set serving as the primary evidence backbone.</p>
+<h3 id="51-test-levels">5.1 Test Levels<a class="headerlink" href="#51-test-levels" title="Permanent link">&para;</a></h3>
+<p>The plan preserves the principal verification levels and document pairings.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Goal</th>
+<th>Primary Inputs</th>
+<th>Primary Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit</td>
+<td>Verify requirement-level behavior of Portview software units</td>
+<td><code>SRS-603</code> SwSRS for Portview</td>
+<td><code>STP-603</code> SwSTP for Portview</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Verify integrated behavior against RS-level interface requirements</td>
+<td><code>RS-603</code> RS for Portview</td>
+<td><code>TP-603</code> SwTP for Portview</td>
+</tr>
+<tr>
+<td>System</td>
+<td>Verify system-level behavior on the controlled product baseline</td>
+<td>System-level specifications and integrated configuration</td>
+<td><code>SystemTP-Z01</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-verification-methods">5.2 Verification Methods<a class="headerlink" href="#52-verification-methods" title="Permanent link">&para;</a></h3>
+<p>Planned methods include:</p>
+<ul>
+<li>code review before unit-level verification</li>
+<li>execution of controlled unit-level procedures against the designated Portview requirement inputs</li>
+<li>integration testing against RS-derived interface requirements</li>
+<li>system testing using <code>SystemTP-Z01</code></li>
+<li>review of execution results and final release decision through the verification report</li>
+</ul>
+<h3 id="53-acceptance-criteria">5.3 Acceptance Criteria<a class="headerlink" href="#53-acceptance-criteria" title="Permanent link">&para;</a></h3>
+<p>All procedures referenced by this plan shall be executed, and the final status of each required result shall be either:</p>
+<ul>
+<li><code>Passed</code>, or</li>
+<li><code>Justified</code> when a failure or deviation is accepted through formal review and documented disposition</li>
+</ul>
+<p>The final verification report should not claim successful completion unless this rule is met.</p>
+<h2 id="6-verification-environment">6. Verification Environment<a class="headerlink" href="#6-verification-environment" title="Permanent link">&para;</a></h2>
+<p>The currently available information identifies assigned personnel and the core execution platform. Additional configuration detail can be appended if it is maintained as a separate controlled record.</p>
+<h3 id="61-hardware-and-devices">6.1 Hardware And Devices<a class="headerlink" href="#61-hardware-and-devices" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Identifier</th>
+<th>Revision</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product under test</td>
+<td><code>Portview</code></td>
+<td><code>Software baseline 2.2.5.16</code></td>
+<td>Release dated <code>2024-10-02</code>; Windows 11 and GenX-CR compatibility update</td>
+</tr>
+<tr>
+<td>System test platform</td>
+<td><code>Genoray testing platform</code></td>
+<td><code>Configuration: Default</code></td>
+<td>System procedure identifier is <code>SystemTP-Z01</code></td>
+</tr>
+<tr>
+<td>Integration interfaces</td>
+<td><code>Portview configuration</code></td>
+<td><code>Serial/prototype number: -</code></td>
+<td>Hardware and network details remain to be expanded if controlled separately</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-software-and-tools">6.2 Software And Tools<a class="headerlink" href="#62-software-and-tools" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Validation Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-603</code> SwSRS for Portview</td>
+<td><code>Rev 1.6</code></td>
+<td>Unit-level requirement input</td>
+<td><code>Released</code></td>
+</tr>
+<tr>
+<td><code>STP-603</code> SwSTP for Portview</td>
+<td><code>Rev 0.1</code></td>
+<td>Unit-level test procedure</td>
+<td><code>Released</code></td>
+</tr>
+<tr>
+<td><code>RS-603</code> RS for Portview</td>
+<td><code>Rev 0.1</code></td>
+<td>Integration requirement input</td>
+<td><code>Released</code></td>
+</tr>
+<tr>
+<td><code>TP-603</code> SwTP for Portview</td>
+<td><code>Rev 0.1</code></td>
+<td>Integration test procedure</td>
+<td><code>Released</code></td>
+</tr>
+<tr>
+<td><code>SystemTP-603</code> SystemTP-Z01</td>
+<td><code>Rev 1.6</code></td>
+<td>System-level test procedure</td>
+<td><code>Released</code></td>
+</tr>
+<tr>
+<td>Microsoft Visual C++ 2017</td>
+<td><code>Professional Edition</code></td>
+<td>Build environment</td>
+<td><code>Validated per SV-603-02 Section 7.3</code></td>
+</tr>
+<tr>
+<td>Genoray testing platform</td>
+<td><code>Default configuration</code></td>
+<td>Test execution environment</td>
+<td><code>Validated per SV-603-02 Section 7.3</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-roles-and-responsibilities">6.3 Roles And Responsibilities<a class="headerlink" href="#63-roles-and-responsibilities" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software Team Manager</td>
+<td>Verification oversight for Portview software activities</td>
+<td><code>S.I. Choi</code></td>
+</tr>
+<tr>
+<td>Software Engineer</td>
+<td>Execution and support for software verification tasks</td>
+<td><code>S.R. Lim</code></td>
+</tr>
+<tr>
+<td>Software Engineer</td>
+<td>Execution and support for software verification tasks</td>
+<td><code>J.W. Lee</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-verification-items">7. Verification Items<a class="headerlink" href="#7-verification-items" title="Permanent link">&para;</a></h2>
+<p>The verification items below follow the planning structure used in this document and keep the verification scope aligned with the defined procedure set.</p>
+<table>
+<thead>
+<tr>
+<th>Item ID</th>
+<th>Description</th>
+<th>Source Requirement / Design Input</th>
+<th>Verification Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UNIT-PORTVIEW</code></td>
+<td>Portview unit verification</td>
+<td><code>SRS-603</code> SwSRS for Portview / All Sections</td>
+<td><code>Unit</code></td>
+</tr>
+<tr>
+<td><code>INT-PORTVIEW</code></td>
+<td>Portview integration verification</td>
+<td><code>RS-603</code> RS for Portview / Section 2.1 Software Requirements</td>
+<td><code>Integration</code></td>
+</tr>
+<tr>
+<td><code>SYS-PORTVIEW</code></td>
+<td>Portview system verification</td>
+<td><code>System-level integrated baseline</code></td>
+<td><code>System</code></td>
+</tr>
+</tbody>
+</table>
+<p>The verification items above are tied to the following planned procedure set:</p>
+<table>
+<thead>
+<tr>
+<th>Verification Item</th>
+<th>Planned Procedure</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Portview unit verification</td>
+<td><code>STP-603</code> SwSTP for Portview / All Sections</td>
+<td>Code review is completed before this verification</td>
+</tr>
+<tr>
+<td>Portview integration verification</td>
+<td><code>TP-603</code> SwTP for Portview / All Sections</td>
+<td><code>RS-603</code> RS for Portview Section 2.1 Software Requirements is used as the input</td>
+</tr>
+<tr>
+<td>Portview system verification</td>
+<td><code>SystemTP-603</code> <a href="../%28SystemTP-603%29%20SystemTP/">SystemTP-Z01</a></td>
+<td>System testing is conducted with <code>SystemTP-Z01</code></td>
+</tr>
+</tbody>
+</table>
+<p>If finer-grained requirement grouping is needed, it should be maintained in a separate traceability annex instead of replacing the planning structure in this section.</p>
+<h2 id="8-procedures-and-evidence">8. Procedures And Evidence<a class="headerlink" href="#8-procedures-and-evidence" title="Permanent link">&para;</a></h2>
+<p>The following procedure set forms the execution baseline for this plan.</p>
+<table>
+<thead>
+<tr>
+<th>Procedure ID</th>
+<th>Title</th>
+<th>Evidence Output</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STP-603</code></td>
+<td>SwSTP for Portview</td>
+<td>Unit-level Portview execution records</td>
+<td><code>Software team</code></td>
+</tr>
+<tr>
+<td><code>TP-603</code></td>
+<td>SwTP for Portview</td>
+<td>Integration execution records for Portview interfaces</td>
+<td><code>Software team</code></td>
+</tr>
+<tr>
+<td><code>SystemTP-603</code></td>
+<td><a href="../%28SystemTP-603%29%20SystemTP/">SystemTP-Z01</a></td>
+<td>System-level execution records</td>
+<td><code>System verification owner</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-schedule-and-entryexit-criteria">9. Schedule And Entry/Exit Criteria<a class="headerlink" href="#9-schedule-and-entryexit-criteria" title="Permanent link">&para;</a></h2>
+<p>This repository does not yet contain an active execution schedule. Until that information is added, the following gate logic should apply:</p>
+<ul>
+<li>entry: approved baseline, approved procedures, available test environment, assigned personnel</li>
+<li>exit: required procedures executed, deviations dispositioned, verification report updated, release decision prepared</li>
+</ul>
+<h2 id="10-deviations-and-risk-handling">10. Deviations And Risk Handling<a class="headerlink" href="#10-deviations-and-risk-handling" title="Permanent link">&para;</a></h2>
+<p>Any failed, blocked, or partially executed procedure shall be recorded with:</p>
+<ul>
+<li>the affected item or procedure identifier</li>
+<li>the observed problem</li>
+<li>the impact on safety, effectiveness, or release confidence</li>
+<li>the disposition owner</li>
+<li>the justification or remediation plan</li>
+</ul>
+<p>Deviations should not be embedded solely in narrative text. The report set should maintain them in a dedicated table.</p>
+<h2 id="11-traceability-strategy">11. Traceability Strategy<a class="headerlink" href="#11-traceability-strategy" title="Permanent link">&para;</a></h2>
+<p>Traceability will be maintained from requirement inputs to procedures, and from procedures to execution evidence and final summary claims.</p>
+<pre class="mermaid"><code>flowchart LR
+    R["Requirements"] --&gt; P["Verification procedures"]
+    P --&gt; E["Execution evidence"]
+    E --&gt; S["Verification summary"]</code></pre>
+<p>Traceability rules:</p>
+<ul>
+<li>each procedure should name its controlling requirement or document section</li>
+<li>each executed record should reference the procedure identifier and baseline</li>
+<li>the verification report should summarize status by verification level and unresolved deviation status</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  <script>
+    document.documentElement.setAttribute("translate", "no");
+    document.documentElement.classList.add("notranslate");
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.setAttribute("translate", "no");
+      document.body.classList.add("notranslate");
+    });
+  </script>
+
+  </body>
+</html>

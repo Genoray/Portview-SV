@@ -1,0 +1,2280 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IEC 62304 software verification document set">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/sv/%28SRS-603%29%20SwSRS/">
+      
+      
+        <link rel="prev" href="../%28RS-603%29%20RS/">
+      
+      
+        <link rel="next" href="../%28SDS-603%29%20SwSDS/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>(SRS-603) SwSRS - Portview SV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <meta name="google" content="notranslate">
+  <meta name="googlebot" content="notranslate">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#srs-603-swsrs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Portview SV" class="md-header__button md-logo" aria-label="Portview SV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portview SV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              (SRS-603) SwSRS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  SV Documents
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portview SV" class="md-nav__button md-logo" aria-label="Portview SV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Portview SV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SV Documents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SV Documents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-01%29%20Software%20Validation%20Report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-01) Software Validation Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-02%29%20Software%20Development%20Planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-02) Software Development Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-03%29%20Software%20High%20Level%20Design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-03) Software High Level Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-04%29%20Software%20Verification%20Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-04) Software Verification Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SV-603-05%29%20Software%20Verification%20Report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SV-603-05) Software Verification Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28RS-603%29%20RS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (RS-603) RS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SRS-603) SwSRS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SRS-603) SwSRS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Approval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepared-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepared by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewed-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewed by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approved-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approved by
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-definitions-and-acronyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Definitions And Acronyms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. General Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. General Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-product-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Product Perspective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-product-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Product Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-intended-user-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Intended User Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-general-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 General Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-functional-requirement-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Functional Requirement Groups
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Functional Requirement Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-user-and-account-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 User And Account Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-acquisition-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Acquisition Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-viewer-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Viewer Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-annotation-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Annotation And Measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-output-and-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Output And Exchange
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-device-and-workflow-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Device And Workflow Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-logging-robustness-and-localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Logging, Robustness, And Localization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-requirement-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Requirement Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-requirement-coverage-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Requirement Coverage Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-downstream-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Downstream Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SDS-603%29%20SwSDS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SDS-603) SwSDS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28TM-603%29%20Traceability%20Matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (TM-603) Traceability Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28STP-603%29%20SwSTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (STP-603) SwSTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28STR-603%29%20SwSTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (STR-603) SwSTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28TP-603%29%20SwTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (TP-603) SwTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28TR-603%29%20SwTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (TR-603) SwTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SystemTP-603%29%20SystemTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SystemTP-603) SystemTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28SystemTR-603%29%20SystemTR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (SystemTR-603) SystemTR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28CSRS-603%29%20SwRS%20for%20Cybersecurity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (CSRS-603) SwRS for Cybersecurity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28FMEA-603%29%20Risks%20FMEA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (FMEA-603) Risks FMEA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%28NSE-603%29%20Network%20Security%20Enclosure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (NSE-603) Network Security Enclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Approval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepared-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prepared by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewed-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewed by
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approved-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approved by
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-definitions-and-acronyms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Definitions And Acronyms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-general-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. General Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. General Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-product-perspective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Product Perspective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-product-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Product Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-intended-user-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Intended User Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-general-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 General Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-functional-requirement-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Functional Requirement Groups
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Functional Requirement Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-user-and-account-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 User And Account Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-acquisition-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Acquisition Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-viewer-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Viewer Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-annotation-and-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Annotation And Measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-output-and-exchange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Output And Exchange
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-device-and-workflow-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Device And Workflow Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-logging-robustness-and-localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Logging, Robustness, And Localization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-requirement-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Requirement Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-requirement-coverage-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Requirement Coverage Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-downstream-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Downstream Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="srs-603-swsrs">(SRS-603) SwSRS<a class="headerlink" href="#srs-603-swsrs" title="Permanent link">&para;</a></h1>
+<p>Document ID: <code>SRS-603</code><br />
+Product: <code>Portview</code><br />
+Document Status: <code>Released</code></p>
+<h2 id="document-overview">Document Overview<a class="headerlink" href="#document-overview" title="Permanent link">&para;</a></h2>
+<p>This document defines the software requirements for Portview.</p>
+<p>Document notes:</p>
+<ul>
+<li>The current structure follows the functional scope visible in the existing Portview software requirement set.</li>
+<li>Portview-only content is retained in this document set.</li>
+</ul>
+<h2 id="document-approval">Document Approval<a class="headerlink" href="#document-approval" title="Permanent link">&para;</a></h2>
+<h3 id="prepared-by">Prepared by<a class="headerlink" href="#prepared-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manager</td>
+<td><code>J. W. Lee</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="reviewed-by">Reviewed by<a class="headerlink" href="#reviewed-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General Manager</td>
+<td><code>S. I. Choi</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="approved-by">Approved by<a class="headerlink" href="#approved-by" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Name</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTO (Director)</td>
+<td><code>K. Y. Ro</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="revision-history">Revision History<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rev.</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0.0</code></td>
+<td><code>2012.03.07</code></td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td><code>0.1</code></td>
+<td><code>2015.01.12</code></td>
+<td>User interface update</td>
+</tr>
+<tr>
+<td><code>0.2</code></td>
+<td><code>2016.01.19</code></td>
+<td>New function implemented</td>
+</tr>
+<tr>
+<td><code>0.3</code></td>
+<td><code>2017.01.13</code></td>
+<td>System issue revision</td>
+</tr>
+<tr>
+<td><code>0.4</code></td>
+<td><code>2018.01.12</code></td>
+<td>New device added</td>
+</tr>
+<tr>
+<td><code>0.5</code></td>
+<td><code>2019.01.21</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>0.6</code></td>
+<td><code>2020.01.30</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>0.7</code></td>
+<td><code>2020.10.08</code></td>
+<td>GUI update</td>
+</tr>
+<tr>
+<td><code>0.8</code></td>
+<td><code>2021.02.26</code></td>
+<td>Linkage usability improvement</td>
+</tr>
+<tr>
+<td><code>0.9</code></td>
+<td><code>2021.09.10</code></td>
+<td>Program issue update</td>
+</tr>
+<tr>
+<td><code>1.0</code></td>
+<td><code>2021.10.08</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>1.1</code></td>
+<td><code>2022.03.04</code></td>
+<td>Connection-status improvement</td>
+</tr>
+<tr>
+<td><code>1.2</code></td>
+<td><code>2023.01.04</code></td>
+<td>Increased image capacity</td>
+</tr>
+<tr>
+<td><code>1.3</code></td>
+<td><code>2023.04.21</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>1.4</code></td>
+<td><code>2024.01.08</code></td>
+<td>Device compatibility update</td>
+</tr>
+<tr>
+<td><code>1.5</code></td>
+<td><code>2024.01.10</code></td>
+<td>Document number changed from 603 to Z01 according to OP-709</td>
+</tr>
+<tr>
+<td><code>1.6</code></td>
+<td><code>2025.07.24</code></td>
+<td>Updated general requirements and added GUI translation requirement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-purpose">1. Purpose<a class="headerlink" href="#1-purpose" title="Permanent link">&para;</a></h2>
+<p>This document defines the software requirements for Portview and describes the software behavior needed to satisfy the intended product workflow.</p>
+<h2 id="2-references">2. References<a class="headerlink" href="#2-references" title="Permanent link">&para;</a></h2>
+<p>The software requirement set is supported primarily by:</p>
+<ul>
+<li><code>RS for Portview</code></li>
+<li><code>SwSDS for Portview</code></li>
+<li><code>SV-04</code> Software Verification Plan</li>
+<li><code>SV-05</code> Software Verification Report</li>
+</ul>
+<h2 id="3-definitions-and-acronyms">3. Definitions And Acronyms<a class="headerlink" href="#3-definitions-and-acronyms" title="Permanent link">&para;</a></h2>
+<p>Common terminology should be normalized in the controlled release set. Acronyms visible in the current requirement content include:</p>
+<table>
+<thead>
+<tr>
+<th>Acronym</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DICOM</code></td>
+<td>Digital Imaging and Communications in Medicine</td>
+</tr>
+<tr>
+<td><code>GUI</code></td>
+<td>Graphical User Interface</td>
+</tr>
+<tr>
+<td><code>TWAIN</code></td>
+<td>Imaging-device interface standard used for import</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-general-requirements">4. General Requirements<a class="headerlink" href="#4-general-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="41-product-perspective">4.1 Product Perspective<a class="headerlink" href="#41-product-perspective" title="Permanent link">&para;</a></h3>
+<p>Portview is workstation software used to acquire, store, display, review, and exchange dental images.</p>
+<p>The current software context includes:</p>
+<ul>
+<li>patient management functionality</li>
+<li>device-service connectivity checks</li>
+<li>image-viewer presentation and annotation tools</li>
+<li>export and communication services</li>
+<li>GUI translation support</li>
+</ul>
+<p>The authored scope excludes ImageProcess-specific processing requirements.</p>
+<h3 id="42-product-functions">4.2 Product Functions<a class="headerlink" href="#42-product-functions" title="Permanent link">&para;</a></h3>
+<p>The software supports:</p>
+<ul>
+<li>patient-oriented image acquisition and review</li>
+<li>image storage and retrieval</li>
+<li>diagnostic viewing and comparison</li>
+<li>annotation and measurement</li>
+<li>print, export, and DICOM communication</li>
+<li>device connectivity status and operational logging</li>
+</ul>
+<h3 id="43-intended-user-context">4.3 Intended User Context<a class="headerlink" href="#43-intended-user-context" title="Permanent link">&para;</a></h3>
+<p>The software operator is expected to understand clinical or hospital workflow and to be familiar with the applicable user manual.</p>
+<h3 id="44-general-constraints">4.4 General Constraints<a class="headerlink" href="#44-general-constraints" title="Permanent link">&para;</a></h3>
+<p>The software relies on:</p>
+<ul>
+<li>supported workstation operating system configuration</li>
+<li>supported acquisition devices and drivers</li>
+<li>controlled local storage and communication interfaces</li>
+</ul>
+<p>The currently visible constraints are:</p>
+<table>
+<thead>
+<tr>
+<th>Constraint Area</th>
+<th>Current Controlled Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating system</td>
+<td>Windows XP Service Pack 2 (x86) or higher</td>
+</tr>
+<tr>
+<td>Concurrent database users</td>
+<td>Depends on the operating system configuration</td>
+</tr>
+<tr>
+<td>Display resolution</td>
+<td>Greater than <code>1024 x 768</code></td>
+</tr>
+<tr>
+<td>Database-server memory</td>
+<td>Greater than <code>4 GB</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-functional-requirement-groups">5. Functional Requirement Groups<a class="headerlink" href="#5-functional-requirement-groups" title="Permanent link">&para;</a></h2>
+<h3 id="51-user-and-account-functions">5.1 User And Account Functions<a class="headerlink" href="#51-user-and-account-functions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>SRS ID</th>
+<th>Requirement</th>
+<th>Design Allocation</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-001</code></td>
+<td>User authentication using Windows account</td>
+<td><code>SDS-001</code></td>
+<td>Application authenticates user through the Windows OS account; no separate login is required</td>
+</tr>
+<tr>
+<td><code>SRS-002</code></td>
+<td>Patient registration</td>
+<td><code>SDS-001</code></td>
+<td>New patient record is created with validated demographic fields and persisted to the database</td>
+</tr>
+<tr>
+<td><code>SRS-003</code></td>
+<td>Modify patient information</td>
+<td><code>SDS-001</code></td>
+<td>Modified patient fields are saved correctly; invalid modifications produce an error message</td>
+</tr>
+<tr>
+<td><code>SRS-004</code></td>
+<td>Search patient</td>
+<td><code>SDS-001</code></td>
+<td>Search by patient identifiers returns matching records; no-match condition is handled gracefully</td>
+</tr>
+<tr>
+<td><code>SRS-005</code></td>
+<td>Delete patient</td>
+<td><code>SDS-001</code></td>
+<td>Patient record is removed after confirmation; active-record conflicts are prevented</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-acquisition-functions">5.2 Acquisition Functions<a class="headerlink" href="#52-acquisition-functions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>SRS ID</th>
+<th>Requirement</th>
+<th>Design Allocation</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-006</code></td>
+<td>Acquire image from IO sensor</td>
+<td><code>SDS-024</code></td>
+<td>Sensor image is acquired and displayed under the selected patient without data corruption</td>
+</tr>
+<tr>
+<td><code>SRS-007</code></td>
+<td>Select the device that captures the image</td>
+<td><code>SDS-023</code>, <code>SDS-028</code></td>
+<td>Selected device becomes active and viewer state follows the selected device type</td>
+</tr>
+<tr>
+<td><code>SRS-008</code></td>
+<td>Display status of the device</td>
+<td><code>SDS-026</code></td>
+<td>Device status changes are reflected correctly between connected and disconnected states</td>
+</tr>
+<tr>
+<td><code>SRS-009</code></td>
+<td>Acquire image from a file</td>
+<td><code>SDS-002</code></td>
+<td>Selected file is imported and displayed correctly; unsupported format produces an error</td>
+</tr>
+<tr>
+<td><code>SRS-010</code></td>
+<td>Acquire image from TWAIN device</td>
+<td><code>SDS-025</code></td>
+<td>TWAIN image is acquired and displayed correctly in the viewer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-viewer-functions">5.3 Viewer Functions<a class="headerlink" href="#53-viewer-functions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>SRS ID</th>
+<th>Requirement</th>
+<th>Design Allocation</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-011</code></td>
+<td>Display image of a patient on mounted device</td>
+<td><code>SDS-003</code></td>
+<td>Main viewer displays the selected patient mount or current image set without misattribution</td>
+</tr>
+<tr>
+<td><code>SRS-012</code></td>
+<td>Display images using thumbnail</td>
+<td><code>SDS-004</code></td>
+<td>Thumbnail viewer shows available images and selection state correctly</td>
+</tr>
+<tr>
+<td><code>SRS-013</code></td>
+<td>Window to select tooth positions to capture</td>
+<td><code>SDS-005</code></td>
+<td>Tooth map navigates to the correct image for the selected position</td>
+</tr>
+<tr>
+<td><code>SRS-014</code></td>
+<td>Compare selected images</td>
+<td><code>SDS-006</code></td>
+<td>Comparison view is presented for the selected images with independent viewing state</td>
+</tr>
+<tr>
+<td><code>SRS-015</code></td>
+<td>Move image</td>
+<td><code>SDS-003</code></td>
+<td>Image position changes according to pan interaction without losing annotations</td>
+</tr>
+<tr>
+<td><code>SRS-016</code></td>
+<td>Zoom image</td>
+<td><code>SDS-013</code></td>
+<td>Image zoom level changes in and out as commanded; image remains usable</td>
+</tr>
+<tr>
+<td><code>SRS-017</code></td>
+<td>Rotate image</td>
+<td><code>SDS-014</code></td>
+<td>Image rotates or flips according to selected option without corrupting display</td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-annotation-and-measurement">5.4 Annotation And Measurement<a class="headerlink" href="#54-annotation-and-measurement" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>SRS ID</th>
+<th>Requirement</th>
+<th>Design Allocation</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-018</code></td>
+<td>Ellipse</td>
+<td><code>SDS-007</code></td>
+<td>Ellipse annotation is created, displayed, and retained correctly across viewer sessions</td>
+</tr>
+<tr>
+<td><code>SRS-019</code></td>
+<td>Text</td>
+<td><code>SDS-008</code></td>
+<td>Text annotation is created, displayed, and retained correctly</td>
+</tr>
+<tr>
+<td><code>SRS-020</code></td>
+<td>Arrow</td>
+<td><code>SDS-009</code></td>
+<td>Arrow annotation is created, displayed, and retained correctly</td>
+</tr>
+<tr>
+<td><code>SRS-021</code></td>
+<td>Pencil</td>
+<td><code>SDS-010</code></td>
+<td>Pencil annotation is created, displayed, and retained correctly</td>
+</tr>
+<tr>
+<td><code>SRS-022</code></td>
+<td>Angle</td>
+<td><code>SDS-011</code></td>
+<td>Angle measurement is created and displayed correctly</td>
+</tr>
+<tr>
+<td><code>SRS-023</code></td>
+<td>Length</td>
+<td><code>SDS-012</code></td>
+<td>Length measurement is created, calibrated, and displayed correctly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-output-and-exchange">5.5 Output And Exchange<a class="headerlink" href="#55-output-and-exchange" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>SRS ID</th>
+<th>Requirement</th>
+<th>Design Allocation</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-024</code></td>
+<td>Print the selected image</td>
+<td><code>SDS-015</code></td>
+<td>Selected image is printed through the standard print path without application error</td>
+</tr>
+<tr>
+<td><code>SRS-025</code></td>
+<td>Print the selected image using a DICOM printer</td>
+<td><code>SDS-016</code></td>
+<td>Image is transmitted to DICOM printer without application error</td>
+</tr>
+<tr>
+<td><code>SRS-026</code></td>
+<td>Export patient image information to file</td>
+<td><code>SDS-017</code></td>
+<td>Image export file is created successfully at target location with preserved attribution</td>
+</tr>
+<tr>
+<td><code>SRS-027</code></td>
+<td>Export images to media device such as CD or DVD</td>
+<td><code>SDS-018</code></td>
+<td>Export to media completes successfully or reports user-visible error</td>
+</tr>
+<tr>
+<td><code>SRS-028</code></td>
+<td>Send image to DICOM server through network</td>
+<td><code>SDS-019</code></td>
+<td>DICOM transmission completes or failure is detected and reported</td>
+</tr>
+<tr>
+<td><code>SRS-029</code></td>
+<td>Import patients from disc</td>
+<td><code>SDS-001</code></td>
+<td>Imported patient data is loaded into the local store with validated records</td>
+</tr>
+</tbody>
+</table>
+<h3 id="56-device-and-workflow-support">5.6 Device And Workflow Support<a class="headerlink" href="#56-device-and-workflow-support" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>SRS ID</th>
+<th>Requirement</th>
+<th>Design Allocation</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-030</code></td>
+<td>Switch FMX continuous acquisition</td>
+<td><code>SDS-027</code></td>
+<td>Continuous-acquisition workflow proceeds according to the selected FMX mode</td>
+</tr>
+<tr>
+<td><code>SRS-031</code></td>
+<td>Use multiple sensor</td>
+<td><code>SDS-028</code></td>
+<td>Selected sensor becomes active and acquisition path follows the chosen device</td>
+</tr>
+<tr>
+<td><code>SRS-032</code></td>
+<td>Display wait status</td>
+<td><code>SDS-029</code></td>
+<td>Sensor or device wait status is shown consistently for the current connection state</td>
+</tr>
+<tr>
+<td><code>SRS-033</code></td>
+<td>USB data integrity check</td>
+<td><code>SDS-030</code></td>
+<td>Integrity-check result is available and unexpected corruption is detected</td>
+</tr>
+<tr>
+<td><code>SRS-034</code></td>
+<td>Local network connection to the medical device</td>
+<td><code>SDS-020</code></td>
+<td>Network-based connectivity required for device workflow is available and stable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="57-logging-robustness-and-localization">5.7 Logging, Robustness, And Localization<a class="headerlink" href="#57-logging-robustness-and-localization" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>SRS ID</th>
+<th>Requirement</th>
+<th>Design Allocation</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SRS-035</code></td>
+<td>Record activity status</td>
+<td><code>SDS-021</code></td>
+<td>Activity log records expected operations without corruption</td>
+</tr>
+<tr>
+<td><code>SRS-036</code></td>
+<td>System instability guidelines</td>
+<td><code>SDS-031</code></td>
+<td>Error type is classified and troubleshooting guidance is displayed</td>
+</tr>
+<tr>
+<td><code>SRS-037</code></td>
+<td>Multilingual support</td>
+<td><code>SDS-022</code></td>
+<td>GUI text changes to the selected language without layout or content corruption</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-requirement-structure">6. Requirement Structure<a class="headerlink" href="#6-requirement-structure" title="Permanent link">&para;</a></h2>
+<p>The current software requirement set follows the pattern below.</p>
+<pre class="mermaid"><code>flowchart LR
+    A["General Requirements"] --&gt; B["Product Perspective"]
+    A --&gt; C["Product Functions"]
+    A --&gt; D["User Expertise"]
+    A --&gt; E["General Constraints"]
+    F["Specific Requirements"] --&gt; G["Functional Requirements"]
+    G --&gt; H["User and Account"]
+    G --&gt; I["Acquisition and Devices"]
+    G --&gt; J["Viewer and Tools"]
+    G --&gt; K["Output and Communication"]
+    G --&gt; L["Logging and Localization"]</code></pre>
+<h2 id="7-requirement-coverage-map">7. Requirement Coverage Map<a class="headerlink" href="#7-requirement-coverage-map" title="Permanent link">&para;</a></h2>
+<p>The currently visible requirement identifiers can be grouped as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement Group</th>
+<th>Representative IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User and account handling</td>
+<td><code>SRS-001</code>, <code>SRS-002</code>, <code>SRS-003</code>, <code>SRS-004</code>, <code>SRS-005</code></td>
+</tr>
+<tr>
+<td>Acquisition and import</td>
+<td><code>SRS-006</code>, <code>SRS-007</code>, <code>SRS-008</code>, <code>SRS-009</code>, <code>SRS-010</code></td>
+</tr>
+<tr>
+<td>Viewer and display</td>
+<td><code>SRS-011</code>, <code>SRS-012</code>, <code>SRS-013</code>, <code>SRS-014</code>, <code>SRS-015</code>, <code>SRS-016</code>, <code>SRS-017</code></td>
+</tr>
+<tr>
+<td>Output and communication</td>
+<td><code>SRS-024</code>, <code>SRS-025</code>, <code>SRS-026</code>, <code>SRS-027</code>, <code>SRS-028</code>, <code>SRS-029</code></td>
+</tr>
+<tr>
+<td>Device support and workflow</td>
+<td><code>SRS-030</code>, <code>SRS-031</code>, <code>SRS-032</code>, <code>SRS-033</code>, <code>SRS-034</code></td>
+</tr>
+<tr>
+<td>Logging and localization</td>
+<td><code>SRS-035</code>, <code>SRS-036</code>, <code>SRS-037</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-downstream-use">8. Downstream Use<a class="headerlink" href="#8-downstream-use" title="Permanent link">&para;</a></h2>
+<p>This software requirement set is intended to drive:</p>
+<ul>
+<li>detailed design allocation in <code>SwSDS for Portview</code></li>
+<li>procedure selection in <code>SwSTP for Portview</code> and <code>SwTP for Portview</code></li>
+<li>traceability coverage in the Portview traceability matrix</li>
+<li>verification planning and reporting in <code>SV-04</code> and <code>SV-05</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  <script>
+    document.documentElement.setAttribute("translate", "no");
+    document.documentElement.classList.add("notranslate");
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.setAttribute("translate", "no");
+      document.body.classList.add("notranslate");
+    });
+  </script>
+
+  </body>
+</html>

@@ -4,7 +4,7 @@ This file records known compliance concerns that are not currently addressed in 
 
 ## 1. Execution Evidence Not Embedded
 
-All verification result documents (`PV-STR-01`, `PV-TR-01`, `PV-SYSTR-01`) record pass/fail status at summary level. No detailed execution evidence (test logs, screenshots, signed step-by-step protocols) is embedded or formally cross-referenced from the controlled document set.
+All verification result documents (`STR-603`, `TR-603`, `SystemTR-603`) record pass/fail status at summary level. No detailed execution evidence (test logs, screenshots, signed step-by-step protocols) is embedded or formally cross-referenced from the controlled document set.
 
 **Risk**: An auditor may request objective evidence that each test procedure was actually executed. The current documents are self-declarations.
 
@@ -28,7 +28,7 @@ All verification result documents (`PV-STR-01`, `PV-TR-01`, `PV-SYSTR-01`) recor
 
 ## 3. External Document References Removed
 
-The following external documents were previously referenced in `FMEA-Z01` and have been removed to keep the controlled document set self-contained:
+The following external documents were previously referenced in `FMEA-603` and have been removed to keep the controlled document set self-contained:
 
 | Removed Reference | Original Context |
 | --- | --- |
@@ -40,4 +40,4 @@ The following external documents were previously referenced in `FMEA-Z01` and ha
 
 **Risk**: If an auditor traces FMEA records back to their original verification evidence, the removed references may raise questions about completeness of risk-control verification.
 
-**Mitigation**: FMEA items now reference equivalent Portview-controlled verification procedures (`PV-TR-01`, `PV-SYSTR-01`, `NSE-Z01`). If the original external documents are needed, they remain available as controlled records in the company quality-management system.
+**Mitigation**: FMEA items now reference equivalent Portview-controlled verification procedures (`TR-603`, `SystemTR-603`, `NSE-603`). If the original external documents are needed, they remain available as controlled records in the company quality-management system.
